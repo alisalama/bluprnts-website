@@ -15,7 +15,8 @@ TABLE OF CONTENTS
 0. CSS Imports
 ========================================================================== */
 
-@import "~bulma/sass/utilities/initial-variables";
+// FIX THE DIFFERENT SIZING! GATSBY IS TOO LARGE!
+@import "initial-variables";
 @import "~bulma";
 
 

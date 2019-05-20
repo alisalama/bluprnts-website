@@ -35,7 +35,7 @@ TABLE OF CONTENTS
 
 //Index hero shape
 .hero.is-slanted:before {
-    background: transparent url(../images/bg/shapes/slant.png) no-repeat scroll 0 bottom / 100% auto;
+    background: transparent url(../../static/img/bg/shapes/slant.png) no-repeat scroll 0 bottom / 100% auto;
     content: "";
     height: 270px;
     width: 100%;
@@ -47,7 +47,7 @@ TABLE OF CONTENTS
 
 //Index footer Chart shape
 .section.footer-chart:before {
-    background: transparent url(../images/bg/shapes/footer-chart.svg) no-repeat scroll 0 bottom / 100% auto;
+    background: transparent url(../../static/img/bg/shapes/footer-chart.svg) no-repeat scroll 0 bottom / 100% auto;
     content: "";
     height: 340px;
     width: 1600px;

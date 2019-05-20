@@ -28,7 +28,7 @@ TABLE OF CONTENTS
 
 //Hero header with wave shape
 .hero.is-feature-wave:before {
-    background: transparent url(../images/bg/shapes/feature-wave.png) no-repeat scroll 0 bottom / 100% auto;
+    background: transparent url(../../static/img/bg/shapes/feature-wave.png) no-repeat scroll 0 bottom / 100% auto;
     content: "";
     height: 321px;
     width: 100%;
@@ -40,7 +40,7 @@ TABLE OF CONTENTS
 
 //Pricing Hero
 .hero.is-feature-wave.is-pricing:before {
-    background: transparent url(../images/bg/shapes/feature-wave.png) no-repeat scroll 0 bottom / 100% auto;
+    background: transparent url(../../static/img/bg/shapes/feature-wave.png) no-repeat scroll 0 bottom / 100% auto;
     content: "";
     height: 321px;
     width: 100%;
@@ -133,7 +133,7 @@ TABLE OF CONTENTS
 .section {
     position: relative;
     &.gradient-circle {
-        background: url(../images/bg/shapes/gradient-circle.png) repeat top right,#fff;
+        background: url(../../static/img/bg/shapes/gradient-circle.png) repeat top right,#fff;
     }
     //top line
     &:before {
@@ -170,7 +170,7 @@ TABLE OF CONTENTS
     &.wavy-bottom {
         //Hero header with wave shape
         &:after {
-            background: transparent url(../images/bg/shapes/blue-waves.png) no-repeat scroll 0 bottom / 100% auto;
+            background: transparent url(../../static/img/bg/shapes/blue-waves.png) no-repeat scroll 0 bottom / 100% auto;
             content: "";
             height: 270px;
             width: 100%;

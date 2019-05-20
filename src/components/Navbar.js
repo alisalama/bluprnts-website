@@ -1,15 +1,32 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../images/bluprnts/bluprnts - white.svg'
+// import github from '../../static/img/github-icon.svg'
+import logo from '../../static/img/bluprnts/bluprnts - white.svg'
 
 const Navbar = class extends React.Component {
+
   constructor(props) {
     super(props)
     this.state = {
       active: false,
       navBarActiveClass: '',
+      navbarState: ''
     }
+  }
+
+  //
+  componentDidMount() {
+    window.addEventListener('scroll', this.navbarScroll);
+  }
+  
+  // set the scrolling behaviours
+  navbarScroll = () => {
+    
+    if(window.scroll){
+      var height = window.scrollY;  //getting the scrolling height of window
+      this.setState({ navbarState: height > 50 ? 'is-active' : '' }); // set the state, dependent on the height
+    }
+
   }
 
   toggleHamburger = () => {
@@ -34,9 +51,9 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <nav
-          className="navbar navbar-wrapper is-cloned"
+          className={`navbar navbar-wrapper is-cloned ${this.state.navbarState}`}
           role="navigation"
           aria-label="main-navigation"
         >
@@ -47,14 +64,14 @@ const Navbar = class extends React.Component {
               </Link>
 
               {/* Hamburger menu */}
-              <div class="custom-burger" data-target="is-static">
-                <a class="responsive-btn">
-                  <span class="menu-toggle">
-                    <span class="icon-box-toggle">
-                      <span class="rotate">
-                        <i class="icon-line-top"></i>
-                        <i class="icon-line-center"></i>
-                        <i class="icon-line-bottom"></i>
+              <div className="custom-burger" data-target="is-static">
+                <a className="responsive-btn">
+                  <span className="menu-toggle">
+                    <span className="icon-box-toggle">
+                      <span className="rotate">
+                        <i className="icon-line-top"></i>
+                        <i className="icon-line-center"></i>
+                        <i className="icon-line-bottom"></i>
                       </span>
                     </span>
                   </span>
@@ -73,57 +90,58 @@ const Navbar = class extends React.Component {
             </div>
 
             {/* Navbar menu */}
-            <div id="is-cloned" class="navbar-menu">
+            <div id="is-cloned" className="navbar-menu">
               {/* <!-- Navbar Start --> */}
-              <div class="navbar-start">
+              <div className="navbar-start">
 
-              <Link className="navbar-item" to="/about">
-                About
+                <Link className="navbar-item" to="/about">
+                  About
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+                <Link className="navbar-item" to="/products">
+                  Products
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
+                <Link className="navbar-item" to="/blog">
+                  Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
+                <Link className="navbar-item" to="/contact">
+                  Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+                <Link className="navbar-item" to="/contact/examples">
+                  Form Examples
               </Link>
-                {/* <!-- Dropdown -->
+                {
+                /* <!-- Dropdown -->
                 <!-- {{> megamenu}} -->
                 <!-- Navbar item -->
-                <!-- <a class="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
+                <!-- <a className="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
                     href="landing-v4-features.html">
                     Product
                 </a> -->
-                <!-- <a class="navbar-item is-slide" href="landing-v4-features.html">
+                <!-- <a className="navbar-item is-slide" href="landing-v4-features.html">
                     Features
                 </a> -->
                 <!-- Navbar item -->
-                <!-- <a class="navbar-item is-slide" href="landing-v4-pricing.html">
+                <!-- <a className="navbar-item is-slide" href="landing-v4-pricing.html">
                     Pricing
-                </a> --> */}
-
+                </a> --> */
+                }
               </div>
 
               {/* <!-- Navbar end --> */}
-              <div class="navbar-end">
+              <div className="navbar-end">
                 {/* <!-- Navbar item -->
-                <!-- <a class="navbar-item is-slide is-centered-tablet" href="landing-v4-pricing.html">
+                <!-- <a className="navbar-item is-slide is-centered-tablet" href="landing-v4-pricing.html">
                     Pricing
                 </a> -->
                 <!-- Navbar item --> */}
-                <div class="navbar-item is-button is-centered-tablet">
-                  <a id="#signup-btn-double" target="_blank" href="https://app.bluprnts.com"
-                    class="button button-cta is-bold btn-align secondary-btn raised">
+                <div className="navbar-item is-button is-centered-tablet" onClick={this.navbarScroll}>
+                  <a id="#signup-btn-double"
+                    className="button button-cta is-bold btn-align secondary-btn raised">
                     Try the demo!
                     </a>
                   {/* <!-- Signup button --> */}
-                  {/* <!-- <div class="navbar-item is-button is-centered-tablet">
-                    <a id="#signup-btn" href="landing-v4-login.html" class="button button-cta is-bold btn-align secondary-btn raised">
+                  {/* <!-- <div className="navbar-item is-button is-centered-tablet">
+                    <a id="#signup-btn" href="landing-v4-login.html" className="button button-cta is-bold btn-align secondary-btn raised">
                         Sign up
                     </a>
                 </div> --> */}
@@ -143,14 +161,14 @@ const Navbar = class extends React.Component {
               </Link>
 
               {/* Hamburger menu */}
-              <div class="custom-burger" data-target="is-static">
-                <a class="responsive-btn">
-                  <span class="menu-toggle">
-                    <span class="icon-box-toggle">
-                      <span class="rotate">
-                        <i class="icon-line-top"></i>
-                        <i class="icon-line-center"></i>
-                        <i class="icon-line-bottom"></i>
+              <div className="custom-burger" data-target="is-static">
+                <a className="responsive-btn">
+                  <span className="menu-toggle">
+                    <span className="icon-box-toggle">
+                      <span className="rotate">
+                        <i className="icon-line-top"></i>
+                        <i className="icon-line-center"></i>
+                        <i className="icon-line-bottom"></i>
                       </span>
                     </span>
                   </span>
@@ -170,48 +188,48 @@ const Navbar = class extends React.Component {
 
 
             {/* <!-- Navbar menu --> */}
-            <div id="is-static" class="navbar-menu">
+            <div id="is-static" className="navbar-menu">
               {/* <!-- Navbar Start --> */}
-              <div class="navbar-start">
+              <div className="navbar-start">
 
-              <Link className="navbar-item" to="/about">
-                About
+                <Link className="navbar-item" to="/about">
+                  About
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+                <Link className="navbar-item" to="/products">
+                  Products
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
+                <Link className="navbar-item" to="/blog">
+                  Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
+                <Link className="navbar-item" to="/contact">
+                  Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
+                <Link className="navbar-item" to="/contact/examples">
+                  Form Examples
               </Link>
 
                 {/* <!-- Dropdown -->
                 <!-- {{> megamenu}} -->
                 <!-- Navbar item -->
-                <!-- <a class="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
+                <!-- <a className="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
                     href="landing-v4-features.html">
                     Product
                 </a>
-                <a class="navbar-item is-slide" href="landing-v4-features.html">
+                <a className="navbar-item is-slide" href="landing-v4-features.html">
                     Features
                 </a> -->
                 <!-- Navbar item -->
-                <!-- <a class="navbar-item is-slide" href="landing-v4-pricing.html">
+                <!-- <a className="navbar-item is-slide" href="landing-v4-pricing.html">
                     Pricing
                 </a> --> */}
 
               </div>
 
               {/* <!-- Navbar end --> */}
-              <div class="navbar-end">
+              <div className="navbar-end">
                 {/* <!-- Signup button -->
-                <!-- <div class="navbar-item is-button is-centered-tablet">
-                    <a id="#signup-btn-double" target="_blank" href="https://app.bluprnts.com" class="button button-cta is-bold btn-align secondary-btn raised">
+                <!-- <div className="navbar-item is-button is-centered-tablet">
+                    <a id="#signup-btn-double" target="_blank" href="https://app.bluprnts.com" className="button button-cta is-bold btn-align secondary-btn raised">
                         Try the demo!
                     </a>
                 </div> --> */}
@@ -221,7 +239,7 @@ const Navbar = class extends React.Component {
           </div>
         </nav>
 
-      </React.Fragment>
+      </>
     )
   }
 }

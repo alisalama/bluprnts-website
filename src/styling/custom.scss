@@ -20,7 +20,6 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 // Import a Google Font and set it as the font family
-@import url('https://fonts.googleapis.com/css?family=Muli:400,500,600,700');
 $family-sans-serif: "Muli",
 -apple-system,
 system-ui,
@@ -32,7 +31,7 @@ Arial,
 sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
-"Segoe UI Symbol" !default;
+"Segoe UI Symbol";
 
 body {
     font-family: $family-sans-serif;
@@ -114,11 +113,15 @@ $accent-box-shadow: 0 14px 26px -12px $accent-shadow-from,
 // SLIDER CONTROL
 .slide-control {
     // .slide-dot{
-        
+
     // },
     div:not(.is-active) {
         a {
             @extend .btn-outlined;
         }
     }
+}
+
+.showcase-wrap {
+    max-height: 350px;
 }

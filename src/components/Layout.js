@@ -1,9 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
+import Footer from './Footer'
+import Navbar from './Navbar'
 import '../styling/core_blue.scss'
+import '../styling/icons.scss'
+import 'typeface-muli';
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
@@ -15,6 +16,7 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link
           rel="apple-touch-icon"
@@ -48,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
         
       </Helmet>
-      <div class="hero is-default is-bold is-fullheight">
+      <div className="hero is-default is-bold is-fullheight">
         <Navbar />
         {children}
         <Footer />
