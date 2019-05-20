@@ -2,9 +2,10 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.bluprnts.com`,
     title: 'bluprnts',
     description:
-      'bluprnts - Want to build a business plan? bluprnts is an online business forecasting tool that allows you to quickly build your business plan from the things you know about!',
+      'Want to build a business plan? bluprnts is an online business forecasting tool that allows you to quickly build your business plan from the things you know about!',
     keywords:
       'bluprnts,business,forecast,forecasting,projections,business plan,forecast business plan,business forecast plan, future,vision,web app'
   },
@@ -68,6 +69,18 @@ module.exports = {
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
