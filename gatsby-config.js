@@ -26,6 +26,13 @@ module.exports = {
         name: 'pages',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/fonts`,
+        name: 'fonts',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -68,7 +75,7 @@ module.exports = {
         printRejected: true,
         develop: true, // Activates purging in npm run develop
         purgeOnly: ['/styling'], // applies purging only on the bulma css file
-        ignore: ['/styling/icons.scss']
+        // ignore: ['/styling/icons.scss']
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
