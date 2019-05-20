@@ -42,7 +42,7 @@ const Slider = class extends React.Component {
                             <h3 className="title is-3">Forecasting</h3>
                             <p>Forecasting is really tricky. We take the difficulty out of it by using simple building
                             blocks to build our bluprnts.</p>
-                            <a href="#" className="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
+                            <a href="https://app.bluprnts.com" className="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
                                 Learn more
                         </a>
                         </div>
@@ -52,7 +52,7 @@ const Slider = class extends React.Component {
                             <p>Full financial statements at a granular level are created for you to give you and indication
                                 of tbhe position you
                             will be in at each month and year.</p>
-                            <a href="#" className="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
+                            <a href="https://app.bluprnts.com" className="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
                                 Learn more
                         </a>
                         </div>
@@ -72,13 +72,13 @@ const Slider = class extends React.Component {
                 {/* <!-- Controls --> */}
                 <div className="slide-control">
                     <div onClick={this.selectSlide} className={`slide-dot ${this.state.currentText === 'feature-1' ? 'is-active' : ''}`} data-feature="feature-1">
-                        <a className="button primary-btn">Forecasting</a>
+                        <button className="button primary-btn">Forecasting</button>
                     </div>
                     <div onClick={this.selectSlide} className={`slide-dot ${this.state.currentText === 'feature-2' ? 'is-active' : ''}`} data-feature="feature-2">
-                        <a className="button primary-btn">Accounting</a>
+                        <button className="button primary-btn">Accounting</button>
                     </div>
                     <div onClick={this.selectSlide} className={`slide-dot ${this.state.currentText === 'feature-3' ? 'is-active' : ''}`} data-feature="feature-3">
-                        <a className="button primary-btn">Docs</a>
+                        <button className="button primary-btn">Docs</button>
                     </div>
                 </div>
 

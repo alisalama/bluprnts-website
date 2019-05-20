@@ -27,27 +27,27 @@ TABLE OF CONTENTS
 ========================================================================== */
 
 //Hero header with wave shape
-.hero.is-feature-wave:before {
+.hero .is-feature-wave {
     background: transparent url(../../static/img/bg/shapes/feature-wave.png) no-repeat scroll 0 bottom / 100% auto;
     content: "";
     height: 321px;
     width: 100%;
     z-index: 1 !important;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
+    // position: absolute;
+    // bottom: -1px;
+    // left: 0;
 }
 
 //Pricing Hero
-.hero.is-feature-wave.is-pricing:before {
+.hero .is-feature-wave.is-pricing {
     background: transparent url(../../static/img/bg/shapes/feature-wave.png) no-repeat scroll 0 bottom / 100% auto;
     content: "";
     height: 321px;
     width: 100%;
     z-index: 1 !important;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
+    // position: absolute;
+    // bottom: -1px;
+    // left: 0;
     .hero-body {
         position: relative;
         z-index: 2;

@@ -347,7 +347,7 @@ export const IndexPageTemplate = ({data}) => (
                   of that by doing all the calculations for you, to allow you to focus on the thing you know about,
                     your business.</span>
               <div className="pt-10 pb-10">
-                <a href="#" className="button btn-align btn-more is-link color-secondary">
+                <a href="https://app.bluprnts.com" className="button btn-align btn-more is-link color-secondary">
                   Learn more about this <i className="sl sl-icon-arrow-right"></i>
                 </a>
               </div>
@@ -368,7 +368,7 @@ export const IndexPageTemplate = ({data}) => (
               <span className="section-feature-description">Allow multiple users to access one bluprnt. Share it with your
                     team, your accountant, or anyone else!</span>
               <div className="pt-10 pb-10">
-                <a href="#" className="button btn-align btn-more is-link color-secondary">
+                <a href="https://docs.bluprnts.com" className="button btn-align btn-more is-link color-secondary">
                   Learn more about this <i className="sl sl-icon-arrow-right"></i>
                 </a>
               </div>
@@ -393,7 +393,7 @@ export const IndexPageTemplate = ({data}) => (
               <span className="section-feature-description">Very simple to use. With our super quick and simple onboarding
                     process, you can rapidly build a forecast in as little as 15 mins!</span>
               <div className="pt-10 pb-10">
-                <a href="#" className="button btn-align btn-more is-link color-secondary">
+                <a href="https://app.bluprnts.com" className="button btn-align btn-more is-link color-secondary">
                   Learn more about this <i className="sl sl-icon-arrow-right"></i>
                 </a>
               </div>

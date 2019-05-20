@@ -74,13 +74,13 @@ section:focus {
 
 }
 
-#backtotop.visible a:hover {
+#backtotop.visible div:hover {
     outline: none;
     opacity: 0.9;
     background: $secondary;
 }
 
-#backtotop a {
+#backtotop div {
     outline: none;
     text-decoration: none;
     border: 0 none;
@@ -95,12 +95,12 @@ section:focus {
     font-size: 26px
 }
 
-body #backtotop a {
+body #backtotop div {
     outline: none;
     color: #fff;
 }
 
-#backtotop a:after {
+#backtotop div:after {
     outline: none;
     content: "\f106";
     font-family: "FontAwesome";

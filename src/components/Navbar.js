@@ -18,11 +18,11 @@ const Navbar = class extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.navbarScroll);
   }
-  
+
   // set the scrolling behaviours
   navbarScroll = () => {
-    
-    if(window.scroll){
+
+    if (window.scroll) {
       var height = window.scrollY;  //getting the scrolling height of window
       this.setState({ navbarState: height > 50 ? 'is-active' : '' }); // set the state, dependent on the height
     }
@@ -65,7 +65,7 @@ const Navbar = class extends React.Component {
 
               {/* Hamburger menu */}
               <div className="custom-burger" data-target="is-static">
-                <a className="responsive-btn">
+                <div className="responsive-btn">
                   <span className="menu-toggle">
                     <span className="icon-box-toggle">
                       <span className="rotate">
@@ -75,7 +75,7 @@ const Navbar = class extends React.Component {
                       </span>
                     </span>
                   </span>
-                </a>
+                </div>
               </div>
 
               <div
@@ -110,20 +110,20 @@ const Navbar = class extends React.Component {
                   Form Examples
               </Link>
                 {
-                /* <!-- Dropdown -->
-                <!-- {{> megamenu}} -->
-                <!-- Navbar item -->
-                <!-- <a className="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
-                    href="landing-v4-features.html">
-                    Product
-                </a> -->
-                <!-- <a className="navbar-item is-slide" href="landing-v4-features.html">
-                    Features
-                </a> -->
-                <!-- Navbar item -->
-                <!-- <a className="navbar-item is-slide" href="landing-v4-pricing.html">
-                    Pricing
-                </a> --> */
+                  /* <!-- Dropdown -->
+                  <!-- {{> megamenu}} -->
+                  <!-- Navbar item -->
+                  <!-- <a className="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
+                      href="landing-v4-features.html">
+                      Product
+                  </a> -->
+                  <!-- <a className="navbar-item is-slide" href="landing-v4-features.html">
+                      Features
+                  </a> -->
+                  <!-- Navbar item -->
+                  <!-- <a className="navbar-item is-slide" href="landing-v4-pricing.html">
+                      Pricing
+                  </a> --> */
                 }
               </div>
 
@@ -136,6 +136,7 @@ const Navbar = class extends React.Component {
                 <!-- Navbar item --> */}
                 <div className="navbar-item is-button is-centered-tablet" onClick={this.navbarScroll}>
                   <a id="#signup-btn-double"
+                    href="https://app.bluprnts.com"
                     className="button button-cta is-bold btn-align secondary-btn raised">
                     Try the demo!
                     </a>
@@ -162,7 +163,7 @@ const Navbar = class extends React.Component {
 
               {/* Hamburger menu */}
               <div className="custom-burger" data-target="is-static">
-                <a className="responsive-btn">
+                <div className="responsive-btn">
                   <span className="menu-toggle">
                     <span className="icon-box-toggle">
                       <span className="rotate">
@@ -172,7 +173,7 @@ const Navbar = class extends React.Component {
                       </span>
                     </span>
                   </span>
-                </a>
+                </div>
               </div>
 
               <div

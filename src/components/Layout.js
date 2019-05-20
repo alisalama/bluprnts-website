@@ -1,15 +1,22 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Footer from './Footer'
-import Navbar from './Navbar'
-import '../styling/core_blue.scss'
-import '../styling/icons.scss'
+import React, { useState } from 'react';
+import Helmet from 'react-helmet';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import BackToTop from './BackToTop';
+import '../styling/core_blue.scss';
+import '../styling/icons.scss';
 import 'typeface-muli';
 import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description, keywords } = useSiteMetadata()
+
+  // get the metadata
+  const { title, description, keywords } = useSiteMetadata();
+  const [bodyCss] = useState('hero is-default is-bold is-fullheight');
+  // const [bodyCss, setCss] = useState('hero is-default is-bold is-fullheight is-medium is-feature-wave is-relative is-pricing');
+
   return (
+
     <div>
       <Helmet>
         <html lang="en" className=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" />
@@ -41,22 +48,29 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
-        
+
         {/* More meta properties */}
         <meta name="theme-color" content="#fff" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
-        
+
       </Helmet>
-      <div className="hero is-default is-bold is-fullheight">
+      <div className={`${bodyCss}`}>
+        
         <Navbar />
         {children}
         <Footer />
+
+        {/* <!-- Back To Top Button --> */}
+        <BackToTop />
+
       </div>
     </div>
+
   )
+
 }
 
 export default TemplateWrapper

@@ -29,23 +29,17 @@ const Footer = class extends React.Component {
               <div>
                 <span className="moto">Follow our social accounts with <i className="fa fa-heart color-red"></i></span>
                 <div className="social-links pt-10 pb-10">
-                  {
-                    /* <a title="facebook" href="https://facebook.com">
-                    <img
-                     src={facebook}
-                     alt="Facebook"
-                     style={{ width: '1em', height: '1em' }}
-                    />
-                    </a> */
-                  }
-                  <a href="/facebook">
+                  <a href="https://www.facebook.com/bluprnts" target="_blank" rel="noopener noreferrer">
                     <span className="icon"><i className="fa fa-facebook"></i></span>
                   </a>
-                  <a href="/twitter">
+                  <a href="https://www.facebook.com/bluprnts" target="_blank" rel="noopener noreferrer">
                     <span className="icon"><i className="fa fa-twitter"></i></span>
                   </a>
-                  <a href="/linkedin">
+                  <a href="https://www.linkedin.com/bluprnts" target="_blank" rel="noopener noreferrer">
                     <span className="icon"><i className="fa fa-linkedin"></i></span>
+                  </a>
+                  <a href="https://www.instagram.com/bluprnts_" target="_blank" rel="noopener noreferrer">
+                    <span className="icon"><i className="fa fa-instagram"></i></span>
                   </a>
                 </div>
               </div>
@@ -56,11 +50,17 @@ const Footer = class extends React.Component {
                   <ul className="footer-column">
                     <li className="column-header">
                       bluprnts
-                            </li>
-                    <li className="column-item"><a href="#">Home</a></li>
-                    <li className="column-item"><a href="#">Pricing</a></li>
-                    <li className="column-item"><a href="#">Get started</a></li>
-                    <li className="column-item"><a href="#">Help</a></li>
+                    </li>
+                    <li className="column-item">
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li className="column-item">
+                      <Link to="/pricing">Pricing</Link>
+                    </li>
+                    <li className="column-item">
+                      <Link to="/get-started">Get started</Link>
+                    </li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">Help</a></li>
                   </ul>
                 </div>
                 <div className="column">
@@ -68,10 +68,10 @@ const Footer = class extends React.Component {
                     <li className="column-header">
                       Resources
                             </li>
-                    <li className="column-item"><a href="#">Learning</a></li>
-                    <li className="column-item"><a href="#">Support center</a></li>
-                    <li className="column-item"><a href="#">Frequent questions</a></li>
-                    <li className="column-item"><a href="#">Schedule a demo</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">Learning</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">Support center</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com/FAQ">Frequent questions</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">Schedule a demo</a></li>
                   </ul>
                 </div>
                 <div className="column">
@@ -79,9 +79,9 @@ const Footer = class extends React.Component {
                     <li className="column-header">
                       Terms
                             </li>
-                    <li className="column-item"><a href="#">Terms of Service</a></li>
-                    <li className="column-item"><a href="#">Privacy policy</a></li>
-                    <li className="column-item"><a href="#">SaaS services</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">Terms of Service</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">Privacy policy</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com">SaaS services</a></li>
                   </ul>
                 </div>
               </div>

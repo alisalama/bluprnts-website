@@ -18,6 +18,12 @@ export const ProductPageTemplate = ({
   fullImage,
   pricing,
 }) => (
+
+
+<>
+  <Pricing pricing={pricing} />
+
+
   <div className="content">
     <div
       className="full-width-image-container margin-top-0"
@@ -81,7 +87,7 @@ export const ProductPageTemplate = ({
                 </div>
               </div>
               <Testimonials testimonials={testimonials} />
-              <div
+              {/* <div
                 className="full-width-image-container"
                 style={{
                   backgroundImage: `url(${
@@ -89,19 +95,17 @@ export const ProductPageTemplate = ({
                       ? fullImage.childImageSharp.fluid.src
                       : fullImage
                   })`,
-                }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+                }} */}
+              {/* /> */}
             </div>
           </div>
         </div>
       </div>
     </section>
+
   </div>
+
+  </>
 )
 
 ProductPageTemplate.propTypes = {
@@ -238,7 +242,8 @@ export const productPageQuery = graphql`
             description
             items
             plan
-            price
+            monthly_price
+            yearly_price
           }
         }
       }
