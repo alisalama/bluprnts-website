@@ -71,10 +71,10 @@ class Pricing extends React.Component {
                             {/* <!-- Pricing image --> */}
                             <div className="pricing-image-container">
                               <img src="assets/images/illustrations/icons/pricing/scooter.svg" alt="" />
-                              <div className="plan-price is-monthly is-active">
+                              <div className={`plan-price is-monthly ${this.state.pricing === 'monthly' ? 'is-active' : ''}`}>
                                 <span>{price.monthly_price}</span>
                               </div>
-                              <div className="plan-price is-yearly">
+                              <div className={`plan-price is-yearly ${this.state.pricing === 'yearly' ? 'is-active' : ''}`}>
                                 <span>{price.yearly_price}</span>
                               </div>
                             </div>
