@@ -83,6 +83,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-136499226-2",
+        head: true, // Defines where to place the tracking script - `true` in the head and `false` in the body
+      },
+    },
+    {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         printAll: true,

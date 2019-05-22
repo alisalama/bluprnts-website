@@ -11,11 +11,6 @@ import heroImage from '../../static/img/illustrations/drawings/landing5-2.svg';
 import logo from '../../static/img/bluprnts/bluprnts - white.svg';
 import plChart from '../../static/img/screengrabs/profit and loss chart.png';
 // image imports
-import company from '../../static/img/illustrations/company.svg';
-import wallet from '../../static/img/illustrations/wallet.svg';
-import bank from '../../static/img/illustrations/bank.svg';
-import factory from '../../static/img/illustrations/factory.svg';
-
 import landingImage1 from '../../static/img/illustrations/drawings/landing5-1.svg'
 import landingImage3 from '../../static/img/illustrations/drawings/landing5-3.svg'
 import landingImage5 from '../../static/img/illustrations/drawings/landing5-5.svg'
