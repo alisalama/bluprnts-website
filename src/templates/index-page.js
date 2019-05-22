@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Slider from '../components/Slider';
-import BackgroundImage from 'gatsby-background-image'
 import ContactTabs from '../components/ContactTabs'
 
 // importing images

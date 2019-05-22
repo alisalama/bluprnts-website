@@ -85,12 +85,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
-        printRejected: true,
+        printAll: true,
+        debug: false,
         develop: true, // Activates purging in npm run develop
         purgeOnly: ['/styling'], // applies purging only on the bulma css file
         // ignore: ['/styling/icons.scss']
       },
-    }, // must be after other CSS plugins
+    }, // must be after other CSS pluginss
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
