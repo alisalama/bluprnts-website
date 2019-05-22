@@ -1,6 +1,5 @@
 ---
-templateKey: 'pricing-page'
-path: /pricing
+templateKey: pricing-page
 title: Our Coffee
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
@@ -44,22 +43,6 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
 testimonials:
   - author: Elisabeth Kaurismäki
     quote: >-
@@ -69,37 +52,36 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
 pricing:
   heading: Pricing
-  description: >-
-    Pick your plan!
+  description: Pick your plan!
   plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - image: /img/apple-touch-icon.png
+      description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
       items:
         - 3 lbs of coffee per month
         - Green or roasted beans"
         - One or two varieties of beans"
-      plan: Small
       monthly_price: '50'
+      plan: Small
       yearly_price: '600'
-      image: illustration/pricing/scooter.svg
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+    - image: /img/blog-index.jpg
+      description: 'Great for avid drinkers, java-loving couples and bigger crowds'
       items:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
-      plan: Big
       monthly_price: '80'
+      plan: Big
       yearly_price: '900'
-      image: illustration/pricing/motorcycle.svg
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+    - image: /img/coffee.png
+      description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
         - Green or roasted beans
         - Unlimited varieties
-      plan: Custom
       monthly_price: '??'
+      plan: Custom
       yearly_price: '??'
-      image: illustration/pricing/zeppelin.svg
 ---
+
