@@ -304,6 +304,8 @@ export const pricingPageQuery = graphql`
             monthly_price
             yearly_price
             image {
+              extension
+              publicURL
               childImageSharp {
                 fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid

@@ -1,9 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import scooter from '../../static/img/illustrations/icons/pricing/scooter.svg'
-// import zeppelin from '../../static/img/illustrations/icons/pricing/scooter.svg'
-// import zeppelin from '../../static/img/illustrations/icons/pricing/scooter.svg'
-
 
 // const Pricing =  => {
 class Pricing extends React.Component {
@@ -44,7 +40,7 @@ class Pricing extends React.Component {
             </div>
           </div>
         </div>
-        <div className="section section-secondary" >
+        <div className="section section-secondary" style={{top: '-1px'}}>
           <div className="container">
             {/* <!-- Pricing wrapper --> */}
             <div className="switch-pricing-wrapper">
@@ -66,17 +62,17 @@ class Pricing extends React.Component {
 
                 <div className="columns tables-wrap">
                   <div className="columns">
-
-                    {console.log(pricing.plans)}
                     {
-                      
                       pricing.plans.map(price => (
 
                         <div key={price.plan} className="column is-4">
                           <div className="flex-card">
                             {/* <!-- Pricing image --> */}
                             <div className="pricing-image-container">
-                              <img src={price.image.childImageSharp.fluid.src} alt="" />
+                             { (!price.image.childImageSharp && price.image.extension === 'svg') && 
+                                <img src={price.image.publicURL} alt={price.plan} />
+                             }
+                              <img src={price.image} alt="" />
                               <div className={`plan-price is-monthly ${this.state.pricing === 'monthly' ? 'is-active' : ''}`}>
                                 <span>{price.monthly_price}</span>
                               </div>

@@ -38,7 +38,7 @@ const Footer = class extends React.Component {
                   <a href="https://www.linkedin.com/bluprnts" target="_blank" rel="noopener noreferrer">
                     <span className="icon"><i className="fa fa-linkedin"></i></span>
                   </a>
-                  <a href="https://www.instagram.com/bluprnts_" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.instagram.com/bluprnts.app" target="_blank" rel="noopener noreferrer">
                     <span className="icon"><i className="fa fa-instagram"></i></span>
                   </a>
                 </div>

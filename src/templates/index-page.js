@@ -65,7 +65,7 @@ export const IndexPageTemplate = ({data}) => (
                   <a target="_blank" href="https://app.bluprnts.com" rel="noopener noreferrer"
                     className="button button-cta is-bold btn-align secondary-btn raised">
                     View Demo
-                        </a>
+                  </a>
                 </p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export const IndexPageTemplate = ({data}) => (
 
           <div className="content-wrapper">
             {/* <!-- Icon boxes --> */}
-            <div className="columns is-vcentered">
+            <div className="columns">
               <div className="column is-7 has-text-centered">
 
             
@@ -152,7 +152,7 @@ export const IndexPageTemplate = ({data}) => (
               </div>
 
               {/* <!-- Feature text --> */}
-              <div className="column is-5 is-offset-1">
+              <div className="column is-5">
                 <div className="content padding-20">
                   <h2 className="feature-headline is-clean">What is it?</h2>
                   <p className="no-margin-bottom pt-5 pb-5 is-size-5">bluprnts is a simple online business forecasting

@@ -7,6 +7,7 @@ import '../styling/core_blue.scss';
 import '../styling/icons.scss';
 import 'typeface-muli';
 import useSiteMetadata from './SiteMetadata'
+import CookieConsent from "react-cookie-consent";
 
 const TemplateWrapper = ({ children }) => {
 
@@ -58,18 +59,34 @@ const TemplateWrapper = ({ children }) => {
 
       </Helmet>
       <div className={`${bodyCss}`}>
-        
+
         <div className="pageloader"></div>
         <div className="infraloader"></div>
 
         <Navbar />
-        {children}
+          {children}
         <Footer />
 
         {/* <!-- Back To Top Button --> */}
         <BackToTop />
 
       </div>
+
+      <CookieConsent 
+        location="bottom"
+        buttonText="Accept cookies"
+        disableButtonStyles={false}
+        buttonClasses="button btn-align btn-more is-link color-secondary"
+        cookieName="bluprntsCookieAcceptance"
+        acceptOnScroll={true}
+        acceptOnScrollPercentage={7}
+        debug={true}
+        style={{ background: "#022F55" }}
+        expires={150}
+      >
+          This website uses cookies to enhance the user experience. By continuing to use this website, you consent to our use of these cookies.
+      </CookieConsent>
+
     </>
 
   )
