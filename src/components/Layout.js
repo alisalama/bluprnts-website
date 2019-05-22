@@ -80,7 +80,7 @@ const TemplateWrapper = ({ children }) => {
         cookieName="bluprntsCookieAcceptance"
         acceptOnScroll={true}
         acceptOnScrollPercentage={7}
-        debug={true}
+        debug={false}
         style={{ background: "#022F55" }}
         expires={150}
       >
