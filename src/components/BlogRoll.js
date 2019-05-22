@@ -47,13 +47,14 @@ class BlogRoll extends React.Component {
                   {/* <!-- Post body --> */}
                   <div className="post-body">
                     <div> <span>by</span><b> Alan Maynard</b></div>
-                    <small>Posted in 
+                    { post.frontmatter.tags && <small>Posted in 
                     {post.frontmatter.tags.map((tag, index) => (
                       <Link key={index} to={`/tags/${kebabCase(tag)}`}>
                         {' ' + startCase(tag)}{ index + 1 < post.frontmatter.tags.length ? ',' : ' '}
                       </Link>
                     ))}
-                    on {post.frontmatter.date}</small>
+                    </small>}
+                    <small> on {post.frontmatter.date}</small>
                     <p>{post.excerpt}</p>
                     <div className="content-footer">
                       <div className="footer-details">
