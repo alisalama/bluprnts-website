@@ -66,14 +66,17 @@ class Pricing extends React.Component {
 
                 <div className="columns tables-wrap">
                   <div className="columns">
+
+                    {console.log(pricing.plans)}
                     {
+                      
                       pricing.plans.map(price => (
 
                         <div key={price.plan} className="column is-4">
                           <div className="flex-card">
                             {/* <!-- Pricing image --> */}
                             <div className="pricing-image-container">
-                              <img src={price.image.childImageSharp.fluid} alt="" />
+                              <img src={price.image.childImageSharp.fluid.src} alt="" />
                               <div className={`plan-price is-monthly ${this.state.pricing === 'monthly' ? 'is-active' : ''}`}>
                                 <span>{price.monthly_price}</span>
                               </div>

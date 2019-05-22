@@ -56,7 +56,7 @@ pricing:
   heading: Pricing
   description: Pick your plan!
   plans:
-    - image: /img/apple-touch-icon.png
+    - image: /img/scooter.svg
       description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
       items:
         - 3 lbs of coffee per month
@@ -65,7 +65,7 @@ pricing:
       monthly_price: '50'
       plan: Small
       yearly_price: '600'
-    - image: /img/blog-index.jpg
+    - image: /img/motorcycle.svg
       description: 'Great for avid drinkers, java-loving couples and bigger crowds'
       items:
         - 6 lbs of coffee per month
@@ -74,7 +74,7 @@ pricing:
       monthly_price: '80'
       plan: Big
       yearly_price: '900'
-    - image: /img/coffee.png
+    - image: /img/scooter.svg
       description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
