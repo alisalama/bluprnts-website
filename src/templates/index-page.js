@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Slider from '../components/Slider';
 import BackgroundImage from 'gatsby-background-image'
+import ContactTabs from '../components/ContactTabs'
 
 // importing images
 import heroImage from '../../static/img/illustrations/drawings/landing5-2.svg';
@@ -85,7 +86,7 @@ export const IndexPageTemplate = ({data}) => (
 
       </div>
 
-      <section className="section is-medium">
+      <section className="section section-feature-grey is-medium no-line-top">
         <div className="container ">
           {/* <!-- Title --> */}
           <div className="section-title-wrapper has-text-centered">
@@ -486,46 +487,7 @@ export const IndexPageTemplate = ({data}) => (
               </div>
             </div>
             <div className="column is-5 is-offset-1">
-              {/* <!-- Contact info tabs --> */}
-              <div className="contact-toggler">
-                <ul className="tabbed-links">
-                  <li className="is-active" data-contact="contact-email">Email</li>
-                  <li data-contact="contact-location">Location</li>
-                  <li data-contact="contact-phone">Phone</li>
-                </ul>
-                <div className="contact-blocks">
-                  {/* <!-- Tab content --> */}
-                  <div id="contact-email" className="contact-block animated preFadeInUp fadeInUp">
-                    <div className="contact-icon">
-                      <i className="fa fa-envelope"></i>
-                    </div>
-                    <div className="contact-info">
-                      <span>Contact us by email</span>
-                      <span>hello@bluprnts.com</span>
-                    </div>
-                  </div>
-                  {/* <!-- Tab content --> */}
-                  <div id="contact-location" className="contact-block animated preFadeInUp fadeInUp is-hidden">
-                    <div className="contact-icon">
-                      <i className="fa fa-map"></i>
-                    </div>
-                    <div className="contact-info">
-                      <span>Visit us @ our Office</span>
-                      <span>in London</span>
-                    </div>
-                  </div>
-                  {/* <!-- Tab content --> */}
-                  <div id="contact-phone" className="contact-block animated preFadeInUp fadeInUp is-hidden">
-                    <div className="contact-icon">
-                      <i className="fa fa-phone"></i>
-                    </div>
-                    <div className="contact-info">
-                      <span>Call our Support team</span>
-                      <span>+44 7807 717354</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ContactTabs />
               {/* <!-- Illustration --> */}
               <img src={cityscape} alt="cityscape" />
             </div>
