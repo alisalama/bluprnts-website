@@ -60,7 +60,7 @@ const Footer = class extends React.Component {
                     <li className="column-item">
                       <Link to="/get-started">Get started</Link>
                     </li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">Help</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com/fixed-costs">Help</a></li>
                   </ul>
                 </div>
                 <div className="column">
@@ -68,10 +68,9 @@ const Footer = class extends React.Component {
                     <li className="column-header">
                       Resources
                             </li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">Learning</a></li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">Support center</a></li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com/FAQ">Frequent questions</a></li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">Schedule a demo</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com" target="_blank" rel="noopener noreferrer">Learning</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com/dashboard" target="_blank" rel="noopener noreferrer">Support center</a></li>
+                    <li className="column-item"><a href="https://docs.bluprnts.com/frequently-asked-questions" target="_blank" rel="noopener noreferrer">Frequent questions</a></li>
                   </ul>
                 </div>
                 <div className="column">
@@ -79,9 +78,9 @@ const Footer = class extends React.Component {
                     <li className="column-header">
                       Terms
                             </li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">Terms of Service</a></li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">Privacy policy</a></li>
-                    <li className="column-item"><a href="https://docs.bluprnts.com">SaaS services</a></li>
+                    <li className="column-item"><a href="https://app.termly.io/document/terms-and-conditions/80e4375e-cb81-425f-a396-fb964f4b3153" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+                    <li className="column-item"><a href="https://app.termly.io/document/terms-and-conditions/80e4375e-cb81-425f-a396-fb964f4b3153" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+                    <li className="column-item"><a href="https://app.termly.io/document/terms-and-conditions/80e4375e-cb81-425f-a396-fb964f4b3153" target="_blank" rel="noopener noreferrer">SaaS services</a></li>
                   </ul>
                 </div>
               </div>

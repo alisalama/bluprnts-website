@@ -13,7 +13,6 @@ class Pricing extends React.Component {
     this.setState({
       pricing: e.currentTarget.value
     });
-    // console.log(e);
   }
 
   render() {
@@ -106,7 +105,7 @@ class Pricing extends React.Component {
             </div>
 
             {/* <!-- Clients --> */}
-            <div className="hero-foot pt-10 pb-10">
+            {/* <div className="hero-foot pt-10 pb-10">
               <div className="container">
                 <div className="tabs partner-tabs is-centered">
                   <ul>
@@ -118,7 +117,7 @@ class Pricing extends React.Component {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <!-- /Clients --> */}
 
           </div>
