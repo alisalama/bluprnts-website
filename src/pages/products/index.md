@@ -73,7 +73,7 @@ full_image: /img/products-full-width.jpg
 pricing:
   heading: Pricing
   description: >-
-    Pick your price!
+    Pick your plan!
   plans:
     - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
       items:

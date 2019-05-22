@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Slider from '../components/Slider';
 import ContactTabs from '../components/ContactTabs'
 
+
 // importing images
 import heroImage from '../../static/img/illustrations/drawings/landing5-2.svg';
 import logo from '../../static/img/bluprnts/bluprnts - white.svg';
@@ -20,6 +21,8 @@ import landingImage3 from '../../static/img/illustrations/drawings/landing5-3.sv
 import landingImage5 from '../../static/img/illustrations/drawings/landing5-5.svg'
 import cityscape from '../../static/img/illustrations/drawings/line-city.svg'
 
+import ReactLineGraphAnimated from '../components/LineChartAnimated';
+
 
 export const IndexPageTemplate = ({data}) => (
 
@@ -34,6 +37,7 @@ export const IndexPageTemplate = ({data}) => (
             <div className="columns is-vcentered">
               <div className="column is-6">
                 <figure className="">
+                   
                   <img
                     src={heroImage}
                     className="levitate"
@@ -98,9 +102,17 @@ export const IndexPageTemplate = ({data}) => (
           <div className="content-wrapper">
             {/* <!-- Icon boxes --> */}
             <div className="columns is-vcentered">
-              <div className="column is-5 is-offset-1 has-text-centered">
+              <div className="column is-7 has-text-centered">
+
+            
+
                 <div className="columns is-vcentered has-text-centered is-multiline">
-                  {/* <!-- Icon box --> */}
+                  <div className="column is-12">
+                  <ReactLineGraphAnimated />
+                  </div>
+                </div>
+                {/* <div className="columns is-vcentered has-text-centered is-multiline">
+
                   <div className="column is-6">
                     <div className="flex-card icon-card light-bordered hover-inset padding-20">
                       <img src={wallet} alt="" />
@@ -109,7 +121,7 @@ export const IndexPageTemplate = ({data}) => (
                       </div>
                     </div>
                   </div>
-                  {/* <!-- Icon box --> */}
+
                   <div className="column is-6">
                     <div className="flex-card icon-card light-bordered hover-inset padding-20">
                       <img src={company} alt="" />
@@ -118,7 +130,7 @@ export const IndexPageTemplate = ({data}) => (
                                 </div>
                     </div>
                   </div>
-                  {/* <!-- Icon box --> */}
+
                   <div className="column is-6">
                     <div className="flex-card icon-card light-bordered hover-inset padding-20">
                       <img src={factory} alt="" />
@@ -127,7 +139,7 @@ export const IndexPageTemplate = ({data}) => (
                       </div>
                     </div>
                   </div>
-                  {/* <!-- Icon box --> */}
+
                   <div className="column is-6">
                     <div className="flex-card icon-card light-bordered hover-inset padding-20">
                       <img src={bank} alt="" />
@@ -136,7 +148,7 @@ export const IndexPageTemplate = ({data}) => (
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>*/}
               </div>
 
               {/* <!-- Feature text --> */}

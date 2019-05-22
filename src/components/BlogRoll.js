@@ -24,6 +24,9 @@ class BlogRoll extends React.Component {
                     Tag="div"
                     className="header has-background-image"
                     fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
+                    style={{
+                      overflow: 'visible'
+                    }}
                   >
                     <div className="title-wrapper">
                       <h2 className="post-title is-bold">{post.frontmatter.title}</h2>

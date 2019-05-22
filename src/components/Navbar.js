@@ -14,7 +14,6 @@ const Navbar = class extends React.Component {
     }
   }
 
-  //
   componentDidMount() {
     window.addEventListener('scroll', this.navbarScroll);
   }
@@ -84,10 +83,14 @@ const Navbar = class extends React.Component {
               {/* <!-- Navbar Start --> */}
               <div className="navbar-start">
 
-              <Link className="navbar-item" to="/about">
+                <Link className="navbar-item" to="/features">
+                  Features
+              </Link>
+
+                <Link className="navbar-item" to="/about">
                   About
               </Link>
-              <Link className="navbar-item" to="/pricing">
+                <Link className="navbar-item" to="/pricing">
                   Pricing
               </Link>
                 <Link className="navbar-item" to="/blog">
@@ -96,46 +99,17 @@ const Navbar = class extends React.Component {
                 <Link className="navbar-item" to="/contact">
                   Contact
               </Link>
-                <Link className="navbar-item" to="/contact/examples">
-                  Form Examples
-              </Link>
-                {
-                  /* <!-- Dropdown -->
-                  <!-- {{> megamenu}} -->
-                  <!-- Navbar item -->
-                  <!-- <a className="navbar-item is-slide is-centered-tablet is-hidden-desktop is-hidden-tablet"
-                      href="landing-v4-features.html">
-                      Product
-                  </a> -->
-                  <!-- <a className="navbar-item is-slide" href="landing-v4-features.html">
-                      Features
-                  </a> -->
-                  <!-- Navbar item -->
-                  <!-- <a className="navbar-item is-slide" href="landing-v4-pricing.html">
-                      Pricing
-                  </a> --> */
-                }
+
               </div>
 
               {/* <!-- Navbar end --> */}
               <div className="navbar-end">
-                {/* <!-- Navbar item -->
-                <!-- <a className="navbar-item is-slide is-centered-tablet" href="landing-v4-pricing.html">
-                    Pricing
-                </a> -->
-                <!-- Navbar item --> */}
                 <div className="navbar-item is-button is-centered-tablet" onClick={this.navbarScroll}>
                   <a id="#signup-btn-double"
                     href="https://app.bluprnts.com"
                     className="button button-cta is-bold btn-align secondary-btn raised">
                     Try the demo!
                     </a>
-                  {/* <!-- Signup button --> */}
-                  {/* <!-- <div className="navbar-item is-button is-centered-tablet">
-                    <a id="#signup-btn" href="landing-v4-login.html" className="button button-cta is-bold btn-align secondary-btn raised">
-                        Sign up
-                    </a>
-                </div> --> */}
                 </div>
               </div>
             </div>
@@ -183,10 +157,14 @@ const Navbar = class extends React.Component {
               {/* <!-- Navbar Start --> */}
               <div className="navbar-start">
 
+                <Link className="navbar-item" to="/features">
+                  Features
+              </Link>
+
                 <Link className="navbar-item" to="/about">
                   About
               </Link>
-               <Link className="navbar-item" to="/pricing">
+                <Link className="navbar-item" to="/pricing">
                   Pricing
               </Link>
                 {/* <Link className="navbar-item" to="/products">
@@ -197,9 +175,6 @@ const Navbar = class extends React.Component {
               </Link>
                 <Link className="navbar-item" to="/contact">
                   Contact
-              </Link>
-                <Link className="navbar-item" to="/contact/examples">
-                  Form Examples
               </Link>
 
                 {/* <!-- Dropdown -->
