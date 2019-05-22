@@ -69,10 +69,9 @@ class Pricing extends React.Component {
                           <div className="flex-card">
                             {/* <!-- Pricing image --> */}
                             <div className="pricing-image-container">
-                             {/* { (!price.image.childImageSharp && price.image.extension === 'svg') && 
+                             { (price.image && !price.image.childImageSharp && price.image.extension === 'svg') && 
                                 <img src={price.image.publicURL} alt={price.plan} />
-                             } */}
-                              <img src={price.image.publicURL} alt={price.plan} />
+                             }
                               <div className={`plan-price is-monthly ${this.state.pricing === 'monthly' ? 'is-active' : ''}`}>
                                 <span>{price.monthly_price}</span>
                               </div>
