@@ -59,6 +59,9 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <div className={`${bodyCss}`}>
         
+        <div className="pageloader"></div>
+        <div className="infraloader"></div>
+
         <Navbar />
         {children}
         <Footer />

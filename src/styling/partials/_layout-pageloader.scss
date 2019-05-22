@@ -23,12 +23,12 @@ TABLE OF CONTENTS
     left: 0;
     background-color: $primary;
     z-index: 999998;
-    transition: -webkit-transform 0.35s ease-out;
-    transition: transform 0.35s ease-out;
-    transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
-    -webkit-transform: translateY(-100%);
+    // transition: -webkit-transform 0.35s ease-out;
+    // transition: transform 0.35s ease-out;
+    // transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
+    // -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
-    will-change: transform;
+    // will-change: transform;
     //Active state
     &.is-active {
         -webkit-transform: translateY(0);

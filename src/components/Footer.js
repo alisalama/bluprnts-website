@@ -24,7 +24,7 @@ const Footer = class extends React.Component {
                 />
                 <div className="footer-description pt-10 pb-10">
                   bluprnts is built for you. Take the complication out of projections.
-                    </div>
+                </div>
               </div>
               <div>
                 <span className="moto">Follow our social accounts with <i className="fa fa-heart color-red"></i></span>

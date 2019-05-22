@@ -57,12 +57,13 @@ export const PricingPageTemplate = ({
                 </div>
               </div>
             </div>
-            <div class="columns">
+            
+            {/* <div class="columns">
               <div class="column is-8 is-offset-2 mt-10">
                 <Testimonials testimonials={testimonials} />
               </div>
 
-            </div>
+            </div> */}
 
           </div>
 
