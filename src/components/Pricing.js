@@ -30,7 +30,7 @@ class Pricing extends React.Component {
               <div className="columns is-vcentered">
 
                 <div className="column is-6 is-offset-3 is-hero-title has-text-centered">
-                  <h1 className="title is-1 is-medium">
+                  <h1 className="title is-1 is-medium is-spaced">
                     {pricing.heading}
                   </h1>
                   <h2 className="subtitle is-4">

@@ -18,7 +18,6 @@ import factory from '../../static/img/illustrations/factory.svg';
 import landingImage1 from '../../static/img/illustrations/drawings/landing5-1.svg'
 import landingImage3 from '../../static/img/illustrations/drawings/landing5-3.svg'
 import landingImage5 from '../../static/img/illustrations/drawings/landing5-5.svg'
-
 import cityscape from '../../static/img/illustrations/drawings/line-city.svg'
 
 
@@ -300,13 +299,7 @@ export const IndexPageTemplate = ({data}) => (
       {/* <!-- /Features Section --> */}
 
       {/* <!-- App showcase Section --> */}
-      <BackgroundImage
-        Tag="div"
-        className="section is-medium section-feature-grey has-background-image is-contain"
-        fluid={data.shapes.childImageSharp.fluid}
-        backgroundColor={'#FBFBFB'}
-      >
-        {/* data-background={shapes} */}
+      <div className="section is-medium section-feature-grey has-background-image is-contain circles-and-shapes">
         <div className="container">
           {/* <!-- Title --> */}
           <div className="section-title-wrapper has-text-centered">
@@ -325,13 +318,12 @@ export const IndexPageTemplate = ({data}) => (
           </div>
 
         </div>
-      {/* </div> */}
-      </BackgroundImage>
+      </div>
       {/* <!-- /App showcase Section --> */}
 
       {/* <!-- Side Features Section --> */}
-      <div className="section is-medium">
-        <div className="container">
+      <div className="section is-medium no-line-bottom wavy-bottom">
+        <div className="container huge-pb">
 
           {/* <!-- Feature --> */}
           <div className="columns is-vcentered">
@@ -360,6 +352,7 @@ export const IndexPageTemplate = ({data}) => (
             <div className="column is-7 has-text-centered is-hidden-tablet is-hidden-desktop">
               <img className="featured-svg" src={landingImage3} alt="Work together!" />
             </div>
+
 
             <div className="column is-5 has-text-right">
               <h3 className="detailed-feature-subtitle">Shared tools</h3>
@@ -414,12 +407,7 @@ export const IndexPageTemplate = ({data}) => (
       {/* <!-- /Side Features Section --> */}
 
       {/* <!-- Testimonials Section --> */}
-      <BackgroundImage
-        Tag="div"
-        className="section section-secondary is-medium has-background-image is-contain"
-        fluid={data.shapesWhite.childImageSharp.fluid}
-
-      >
+      <div className="section section-secondary is-medium has-background-image is-contain circles-and-shapes-w" >
         <div className="container">
           {/* <!-- Title --> */}
           <div className="section-title-wrapper has-text-centered">
@@ -434,7 +422,7 @@ export const IndexPageTemplate = ({data}) => (
           </div>
         </div>
 
-      </BackgroundImage>
+      </div>
       {/* <!-- /Testimonials Section --> */}
 
 
@@ -630,14 +618,14 @@ export const pageQuery = graphql`
   query HeaderImageQuery {
     shapes: file(relativePath: { eq: "bg/shapes/circles-and-shapes.png" }) {
       childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
+        fluid(maxWidth: 400, maxHeight: 250, quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }
     },
     shapesWhite: file(relativePath: { eq: "bg/shapes/circles-and-shapes-w.png" }) {
       childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
+        fluid(maxWidth: 500, maxHeight: 250, quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }

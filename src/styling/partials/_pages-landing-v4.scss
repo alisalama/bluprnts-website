@@ -148,6 +148,11 @@ TABLE OF CONTENTS
         margin: 0 auto;
         transform: rotate(180deg);
     }
+    &.no-line-top {
+        &:before {
+            display: none !important;
+        }
+    }
     //bottom line
     &:after {
         content: '';
@@ -182,6 +187,38 @@ TABLE OF CONTENTS
             transform: rotate(0);
         }
     }
+    //Wave shape
+     &.circles-and-shapes-w {
+        //Hero header with wave shape
+        // &:after {
+            background-image: url(../../static/img/bg/shapes/circles-and-shapes-w.png);
+            // content: "";
+            // height: 270px;
+            // width: 100%;
+            // z-index: 1 !important;
+            // position: absolute;
+            // bottom: -1px;
+            // left: 0;
+            // display: block !important;
+            // transform: rotate(0);
+        // }
+    }
+    //Wave shape
+    &.circles-and-shapes {
+        //Hero header with wave shape
+        // &:after {
+            background-image: url(../../static/img/bg/shapes/circles-and-shapes.png);
+            // content: "";
+            // height: 270px;
+            // width: 100%;
+            // z-index: 1 !important;
+            // position: absolute;
+            // bottom: -1px;
+            // left: 0;
+            // display: block !important;
+            // transform: rotate(0);
+        // }
+    }
 }
 
 //divider
@@ -199,7 +236,11 @@ TABLE OF CONTENTS
     &.is-contain {
         background-size: contain;
         background-repeat: repeat;
+        &.is-top{
+            background-position: top
+        }
     }
+    
 }
 
 /* ==========================================================================

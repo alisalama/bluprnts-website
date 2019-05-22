@@ -15,10 +15,8 @@ TABLE OF CONTENTS
 0. CSS Imports
 ========================================================================== */
 
-// FIX THE DIFFERENT SIZING! GATSBY IS TOO LARGE!
 @import "initial-variables";
 @import "~bulma";
-
 
 @import 'partials/layout-colors';
 @import 'partials/themes-blue';
@@ -49,6 +47,7 @@ TABLE OF CONTENTS
 @import 'partials/pages-details';
 @import 'partials/pages-auth';
 @import 'partials/pages-landing-v4';
+@import 'partials/pages-agency';
 @import 'partials/layout-helpers';
 @import 'partials/layout-responsive';
 

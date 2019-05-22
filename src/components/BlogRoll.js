@@ -1,61 +1,82 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import BackgroundImage from 'gatsby-background-image'
+import { kebabCase, startCase } from 'lodash'
+
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${
-                            post.title
-                          }`,
-                        }}
-                      />
+
+      <>
+        <div className="columns">
+          <div className="column is-8 is-offset-2">
+
+            { posts && posts.map(({ node: post }, index) => (
+
+                <div key={post.id} className={`flex-card is-post light-bordered ${index === 0 ? 'is-pulled-top' : ''}`}>
+                  {/* <!-- Post header --> */}
+                  { post.frontmatter.featuredimage && <BackgroundImage
+                    Tag="div"
+                    className="header has-background-image"
+                    fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
+                  >
+                    <div className="title-wrapper">
+                      <h2 className="post-title is-bold">{post.frontmatter.title}</h2>
+                      <h4 className="post-subtitle">{post.frontmatter.subtitle}</h4>
                     </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
-          ))}
-      </div>
+
+                    <div className="author-avatar">
+                      <img src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/images/agency/avatars/alan.jpg" />
+                    </div>
+                    <button className="like fab-btn mini">
+                      <span className="like-wrapper">
+                        <i className="material-icons unliked">favorite_border</i>
+                        <i className="material-icons liked">favorite</i>
+                        <span className="like-overlay"></span>
+                      </span>
+                    </button>
+                    {/* <!-- Header overlay --> */}
+                    <div className="header-overlay"></div>
+                  </BackgroundImage>}
+
+                  {/* <!-- Post body --> */}
+                  <div className="post-body">
+                    <div> <span>by</span><b> Alan Maynard</b></div>
+                    <small>Posted in 
+                    {post.frontmatter.tags.map((tag, index) => (
+                      <Link key={index} to={`/tags/${kebabCase(tag)}`}>
+                        {' ' + startCase(tag)}{ index + 1 < post.frontmatter.tags.length ? ',' : ' '}
+                      </Link>
+                    ))}
+                    on {post.frontmatter.date}</small>
+                    <p>{post.excerpt}</p>
+                    <div className="content-footer">
+                      <div className="footer-details">
+                        <Link className="button is-link btn-upper" to={post.fields.slug}>
+                          Read more
+                        </Link>
+                        <div className="likes-count ml-auto">
+                          <i className="im im-icon-Heart-2"></i>
+                          <span className="stat">32</span>
+                        </div>
+                        <div className="comments-count">
+                          <i className="im im-icon-Speach-Bubble11"></i>
+                          <span className="stat">8</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              ))}
+          </div>
+        </div>
+      </>
     )
   }
 }
@@ -88,6 +109,7 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
+                tags
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {
