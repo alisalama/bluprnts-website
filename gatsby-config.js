@@ -87,7 +87,7 @@ module.exports = {
       options: {
         printAll: true,
         debug: false,
-        develop: true, // Activates purging in npm run develop
+        develop: false, // Activates purging in npm run develop
         purgeOnly: ['/styling'], // applies purging only on the bulma css file
         // ignore: ['/styling/icons.scss']
       },

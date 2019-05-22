@@ -18,7 +18,7 @@ intro:
         variety of coffee beans grown with great care for the environment and
         local communities. Check our post or contact us directly for current
         availability.
-    - image: /img/coffee-gear.png
+    - image: /img/illustration/pricing/motorcycle.svg
       text: >
         We offer a small, but carefully curated selection of brewing gear and
         tools for every taste and experience level. No matter if you roast your
@@ -83,6 +83,7 @@ pricing:
       plan: Small
       monthly_price: '50'
       yearly_price: '600'
+      image: illustration/pricing/scooter.svg
     - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
       items:
         - 6 lbs of coffee per month
@@ -91,6 +92,7 @@ pricing:
       plan: Big
       monthly_price: '80'
       yearly_price: '900'
+      image: illustration/pricing/motorcycle.svg
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
@@ -99,4 +101,5 @@ pricing:
       plan: Custom
       monthly_price: '??'
       yearly_price: '??'
+      image: illustration/pricing/zeppelin.svg
 ---

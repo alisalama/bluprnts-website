@@ -17,47 +17,46 @@ export const PricingPageTemplate = ({
   pricing,
 }) => (
 
-
     <>
       <Pricing pricing={pricing} />
 
-      <section class="section is-medium section-feature-grey">
-        <div class="container">
+      <section className="section is-medium section-feature-grey">
+        <div className="container">
 
-          <h2 class="title section-subtitle dark-text text-bold has-text-centered is-2 pt-20 pb-20">
+          <h2 className="title section-subtitle dark-text text-bold has-text-centered is-2 pt-20 pb-20">
             You have some questions?
           </h2>
 
-          <div class="content-wrapper">
-            <div class="columns">
-              <div class="column is-4 is-offset-2">
-                <div class="content">
-                  <p class="text-bold dark-text">1. How do i get started?</p>
+          <div className="content-wrapper">
+            <div className="columns">
+              <div className="column is-4 is-offset-2">
+                <div className="content">
+                  <p className="text-bold dark-text">1. How do i get started?</p>
                   <p>Lorem ipsum dolor sit amet, accusata voluptatibus per eu, probo summo argumentum ea vel. Pri nonumy sententiae ex, eam adhuc regione tibique te. Et sit alii vero harum, ne his viderer consectetuer.</p>
                 </div>
-                <div class="content">
-                  <p class="text-bold dark-text">3. Where can i get training?</p>
+                <div className="content">
+                  <p className="text-bold dark-text">3. Where can i get training?</p>
                   <p>Lorem ipsum dolor sit amet, accusata voluptatibus per eu, probo summo argumentum ea vel. Pri nonumy sententiae ex, eam adhuc regione tibique te. Et sit alii vero harum, ne his viderer consectetuer.</p>
                 </div>
-                <div class="content">
-                  <p class="text-bold dark-text">5. Are updates mandatory?</p>
+                <div className="content">
+                  <p className="text-bold dark-text">5. Are updates mandatory?</p>
                   <p>Lorem ipsum dolor sit amet, accusata voluptatibus per eu, probo summo argumentum ea vel. Pri nonumy sententiae ex, eam adhuc regione tibique te. Et sit alii vero harum, ne his viderer consectetuer.</p>
                 </div>
               </div>
-              <div class="column is-4">
-                <div class="content">
-                  <p class="text-bold dark-text">2. How can i add people to my team?</p>
+              <div className="column is-4">
+                <div className="content">
+                  <p className="text-bold dark-text">2. How can i add people to my team?</p>
                   <p>Lorem ipsum dolor sit amet, accusata voluptatibus per eu, probo summo argumentum ea vel. Pri nonumy sententiae ex, eam adhuc regione tibique te. Et sit alii vero harum, ne his viderer consectetuer.</p>
                 </div>
-                <div class="content pb-40">
-                  <p class="text-bold dark-text">4. Do you have a refund policy?</p>
+                <div className="content pb-40">
+                  <p className="text-bold dark-text">4. Do you have a refund policy?</p>
                   <p>Lorem ipsum dolor sit amet, accusata voluptatibus per eu, probo summo argumentum ea vel. Pri nonumy sententiae ex, eam adhuc regione tibique te. Et sit alii vero harum, ne his viderer consectetuer.</p>
                 </div>
               </div>
             </div>
-            
-            {/* <div class="columns">
-              <div class="column is-8 is-offset-2 mt-10">
+
+            {/* <div className="columns">
+              <div className="column is-8 is-offset-2 mt-10">
                 <Testimonials testimonials={testimonials} />
               </div>
 
@@ -68,6 +67,31 @@ export const PricingPageTemplate = ({
         </div>
 
       </section>
+
+      {/* 
+      <section className="section section-secondary no-padding-bottom">
+        <div className="container">
+          <div className="columns is-vcentered">
+            <div className="column is-4 is-offset-1">
+              <div className="minimal-feature">
+                <h2 className="title is-5 minimal-title bold-text light-text no-margin">Start managing now</h2>
+                <div className="feature-content light-text">
+                  Leave unecessary pressure behind, everything is made simple so you can focus on your work. Try our Free plan and discover all our features.
+                            </div>
+                <div className="pt-20 pb-20">
+                  <a href="landing-v3-signup.html" className="button button-cta btn-outlined is-bold light-btn rounded">Get started for free</a>
+                  <span className="conditions">Right now.</span>
+                </div>
+              </div>
+            </div>
+            <div className="column is-5 is-offset-2">
+              <div className="city-container">
+                <img src="assets/images/illustrations/drawings/city.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
 
       {/* <div className="content">
     <div
@@ -279,6 +303,13 @@ export const pricingPageQuery = graphql`
             plan
             monthly_price
             yearly_price
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

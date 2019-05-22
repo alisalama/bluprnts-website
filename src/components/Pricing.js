@@ -1,5 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import scooter from '../../static/img/illustrations/icons/pricing/scooter.svg'
+// import zeppelin from '../../static/img/illustrations/icons/pricing/scooter.svg'
+// import zeppelin from '../../static/img/illustrations/icons/pricing/scooter.svg'
+
 
 // const Pricing =  => {
 class Pricing extends React.Component {
@@ -28,7 +32,6 @@ class Pricing extends React.Component {
           <div className="hero-body mb-20">
             <div className="container">
               <div className="columns is-vcentered">
-
                 <div className="column is-6 is-offset-3 is-hero-title has-text-centered">
                   <h1 className="title is-1 is-medium is-spaced">
                     {pricing.heading}
@@ -70,7 +73,7 @@ class Pricing extends React.Component {
                           <div className="flex-card">
                             {/* <!-- Pricing image --> */}
                             <div className="pricing-image-container">
-                              <img src="assets/images/illustrations/icons/pricing/scooter.svg" alt="" />
+                              <img src={price.image.childImageSharp.fluid} alt="" />
                               <div className={`plan-price is-monthly ${this.state.pricing === 'monthly' ? 'is-active' : ''}`}>
                                 <span>{price.monthly_price}</span>
                               </div>
@@ -137,6 +140,7 @@ Pricing.propTypes = {
       yearly_price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       description: PropTypes.string,
       items: PropTypes.array,
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
     })
   ),
 }
