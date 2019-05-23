@@ -23,7 +23,7 @@ export default () => (
           <h5>We'll be in contact soon.</h5>
 
 
-          <Link to="/" className="button secondary-btn">
+          <Link to="/" className="button secondary-btn mt-20">
             Back to home
           </Link>
 
