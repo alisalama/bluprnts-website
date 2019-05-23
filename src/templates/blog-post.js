@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import BackgroundImage from 'gatsby-background-image'
 
 export const BlogPostTemplate = ({
   content,
@@ -13,6 +14,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   subtitle,
+  featuredimage,
   date,
   helmet,
 }) => {
@@ -21,24 +23,46 @@ export const BlogPostTemplate = ({
   return (
 
     <>
-    
+
       {helmet || ''}
 
-      <section className="section blog-section section-light-grey no-line-bottom no-line-top">
+      <div id="main-hero" className="hero-body is-theme-secondary">
+        <div className="container has-text-centered">
+          <div className="columns is-vcentered">
+            <div className="column is-6 is-offset-3 has-text-centered ">
+
+              <h1 className="title is-1 is-medium is-spaced is-header-caption">
+                Blog
+                </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="section is-medium blog-section no-line-bottom has-background-image is-contain is-top circles-and-shapes">
+
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
 
-              <div className="flex-card is-full-post light-bordered">
+              <div className="flex-card is-full-post is-pulled-top light-bordered">
                 {/* <!-- Post meta --> */}
-                <div className="post-meta content">
+                <BackgroundImage
+                  Tag="div"
+                  className="post-meta content has-background-image"
+                  fluid={featuredimage.childImageSharp.fluid}
+                  style={{
+                    overflow: 'visible'
+                  }}
+                >
+
+
                   {/* <!-- Author avatar --> */}
-                  <img className="author-avatar is-hidden-mobile" src="https://via.placeholder.com/250x250" alt=""
-                    data-demo-src="assets/images/agency/avatars/carolin.png" />
+                  {/* <img className="author-avatar is-hidden-mobile" src="https://via.placeholder.com/250x250" alt=""
+                    data-demo-src="assets/images/agency/avatars/carolin.png" /> */}
                   {/* <!-- title --> */}
-                  <div className="title-block">
-                    <h2>{title}</h2>
-                    <h4>{subtitle}</h4>
+                  <div className="title-block title-wrapper">
+                    <h2 className="post-title is-bold">{title}</h2>
+                    <h4 className="post-subtitle">{subtitle}</h4>
                     {/* <!-- Like button --> */}
                     <button className="like is-full fab-btn mini" data-toggle="tooltip" data-placement="left" data-title="Liked by 64 persons">
                       <span className="like-wrapper">
@@ -48,22 +72,22 @@ export const BlogPostTemplate = ({
                       </span>
                     </button>
                   </div>
-                </div>
+                </BackgroundImage>
                 {/* <!-- Post body --> */}
                 <div className="post-body content">
                   {/* <!-- More meta --> */}
                   <div className="author-name pb-5">
                     {/* by <b>Alan Maynard</b> */}
                     Posted
-                    { tags && <small> in 
-                    { tags.map((tag, index) => (
+                    {tags && <small> in
+                    {tags.map((tag, index) => (
                       <Link key={index} to={`/tags/${kebabCase(tag)}`}>
-                        {' ' + startCase(tag)}{ index + 1 < tags.length ? ',' : ' '}
+                        {' ' + startCase(tag)}{index + 1 < tags.length ? ',' : ' '}
                       </Link>
-                    )) }</small> }
-                    
-                    </div>
-                    <div className="timestamp"><i className="sl sl-icon-clock"></i> {date}</div>
+                    ))}</small>}
+
+                  </div>
+                  <div className="timestamp"><i className="sl sl-icon-clock"></i> {date}</div>
 
                   {/* <div className="author-name pb-10">by <b><a href="#">Marjory Cambell</a></b>, <span>Ecommerce consultant</span></div>
                   <div className="timestamp"><i className="sl sl-icon-clock"></i> oct 16 2018, 4:12pm</div> */}
@@ -109,6 +133,7 @@ BlogPostTemplate.propTypes = {
   subtitle: PropTypes.string,
   date: PropTypes.string,
   helmet: PropTypes.object,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
 }
 
 const BlogPost = ({ data }) => {
@@ -133,6 +158,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         subtitle={post.frontmatter.subtitle}
+        featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
   )
@@ -157,6 +183,13 @@ export const pageQuery = graphql`
         subtitle
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 120, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

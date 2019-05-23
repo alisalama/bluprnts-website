@@ -1,42 +1,44 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
-
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+import React from 'react';
+import Layout from '../../components/Layout';
+import cityscape from '../../../static/img/illustrations/drawings/line-city.svg';
+import ContactTabs from '../../components/ContactTabs';
+import ContactForm from '../../components/ContactForm';
 
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { isValidated: false }
-  }
-
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
-  handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error))
   }
 
   render() {
     return (
       <Layout>
-        <section className="section">
+        {/* <!-- Contact Section --> */}
+        <div className="section is-medium section-feature-grey no-line-top no-line-bottom">
+          <div className="container">
+            {/* <!-- Title --> */}
+            <div className="section-title-wrapper has-text-centered">
+              {/* <!-- Divider --> */}
+              <div className="special-divider">
+                <span></span>
+                <span></span>
+              </div>
+              <h2 className="title is-2">Drop us a Line.</h2>
+              <h4 className="subtitle is-4">Ask us a question, or just say Hello.</h4>
+            </div>
+            <div className="columns">
+              <div className="column is-6">
+                <ContactForm />
+              </div>
+              <div className="column is-5 is-offset-1">
+                <ContactTabs />
+                <img src={cityscape} alt="cityscape" />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* /Contact Section */}
+
+        {/* <section className="section">
           <div className="container">
             <div className="content">
               <h1>Contact</h1>
@@ -48,7 +50,6 @@ export default class Index extends React.Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>
@@ -108,7 +109,7 @@ export default class Index extends React.Component {
               </form>
             </div>
           </div>
-        </section>
+        </section> */}
       </Layout>
     )
   }

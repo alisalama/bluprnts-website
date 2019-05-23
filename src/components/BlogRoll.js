@@ -33,9 +33,9 @@ class BlogRoll extends React.Component {
                       <h4 className="post-subtitle">{post.frontmatter.subtitle}</h4>
                     </div>
 
-                    <div className="author-avatar">
+                    {/* <div className="author-avatar">
                       <img src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/images/agency/avatars/alan.jpg" />
-                    </div>
+                    </div> */}
                     <button className="like fab-btn mini">
                       <span className="like-wrapper">
                         <i className="material-icons unliked">favorite_border</i>

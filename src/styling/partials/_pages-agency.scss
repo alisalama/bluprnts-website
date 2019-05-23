@@ -1123,7 +1123,7 @@ TABLE OF CONTENTS
 //Blog single post
 .flex-card.is-full-post {
     border-radius: 6px;
-    padding: 60px;
+    // padding: 60px;
     &.has-sidebar {
         padding: 40px;
     }
@@ -1133,7 +1133,7 @@ TABLE OF CONTENTS
     .post-meta {
         display: flex;
         justify-content: flex-start;
-        padding: 10px 30px;
+        padding: 60px;
         margin: 0;
         border-bottom: 1px solid $fade-grey;
         img {
@@ -1147,14 +1147,15 @@ TABLE OF CONTENTS
             width: 100%;
             h2, h4 {
                 margin-bottom: 0;
+                color: $white;
             }
             h2 {
-                
-                font-weight: 700; 
+                font-weight: 600; 
             }
             h4 {
                 font-family: 'Muli', sans-serif;
-                color: $muted-grey;
+                color: $white;
+                font-weight: 400; 
                 padding: 10px 0;
             }
             .like {
@@ -1211,6 +1212,7 @@ TABLE OF CONTENTS
             background-color: $fade-grey;
         }
         .share-post {
+            margin-top: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;

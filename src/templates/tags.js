@@ -21,6 +21,7 @@ class TagRoute extends React.Component {
     } tagged with “${tag}”`
 
     return (
+      
       <Layout>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
