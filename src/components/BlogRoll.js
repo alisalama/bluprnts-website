@@ -49,8 +49,9 @@ class BlogRoll extends React.Component {
 
                   {/* <!-- Post body --> */}
                   <div className="post-body">
-                    <div> <span>by</span><b> Alan Maynard</b></div>
-                    { post.frontmatter.tags && <small>Posted in 
+                    {/* <div> <span>by</span><b> Ali Salama</b></div> */}
+                    Posted
+                    { post.frontmatter.tags && <small> in 
                     {post.frontmatter.tags.map((tag, index) => (
                       <Link key={index} to={`/tags/${kebabCase(tag)}`}>
                         {' ' + startCase(tag)}{ index + 1 < post.frontmatter.tags.length ? ',' : ' '}
@@ -110,6 +111,7 @@ export default () => (
               }
               frontmatter {
                 title
+                subtitle
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost

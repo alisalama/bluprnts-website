@@ -52,8 +52,10 @@ export const BlogPostTemplate = ({
                 {/* <!-- Post body --> */}
                 <div className="post-body content">
                   {/* <!-- More meta --> */}
-                  <div className="author-name pb-5">by <b>Alan Maynard</b>
-                    { tags && <small> Posted in 
+                  <div className="author-name pb-5">
+                    {/* by <b>Alan Maynard</b> */}
+                    Posted
+                    { tags && <small> in 
                     { tags.map((tag, index) => (
                       <Link key={index} to={`/tags/${kebabCase(tag)}`}>
                         {' ' + startCase(tag)}{ index + 1 < tags.length ? ',' : ' '}
