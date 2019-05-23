@@ -1,16 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 
-import { AgGridReact } from 'ag-grid-react';
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-
+import { AgGridReact } from "ag-grid-react";
+import "ag-grid-community/dist/styles/ag-grid.css";
+import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
 class FeaturesPageTemplate extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -19,20 +17,19 @@ class FeaturesPageTemplate extends React.Component {
         { headerName: "Make", field: "make" },
         { headerName: "Model", field: "model" },
         { headerName: "Price", field: "price" }
-
       ],
       rowData: [
         { make: "Toyota", model: "Celica", price: 35000 },
         { make: "Ford", model: "Mondeo", price: 32000 },
         { make: "Porsche", model: "Boxter", price: 72000 }
       ]
-    }
+    };
   }
 
   render() {
-
-    const PageContent = contentComponent || Content;
     const { title, content, contentComponent } = this.props;
+    const PageContent = contentComponent || Content;
+
     return (
       <>
         <section>
@@ -45,12 +42,12 @@ class FeaturesPageTemplate extends React.Component {
                   </h2>
                   <div
                     className="ag-theme-balham"
-                    style={{ height: '200px', width: '600px' }}
+                    style={{ height: "200px", width: "600px" }}
                   >
                     <AgGridReact
                       columnDefs={this.state.columnDefs}
-                      rowData={this.state.rowData}>
-                    </AgGridReact>
+                      rowData={this.state.rowData}
+                    />
                   </div>
                   <PageContent className="content" content={content} />
                 </div>
@@ -58,20 +55,19 @@ class FeaturesPageTemplate extends React.Component {
             </div>
           </div>
         </section>
-
       </>
-    )
+    );
   }
 }
 
 FeaturesPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  contentComponent: PropTypes.func
+};
 
 const FeaturesPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -81,14 +77,14 @@ const FeaturesPage = ({ data }) => {
         content={post.html}
       />
     </Layout>
-  )
-}
+  );
+};
 
 FeaturesPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default FeaturesPage
+export default FeaturesPage;
 
 export const featuresPageQuery = graphql`
   query FeaturesPage($id: String!) {
@@ -99,4 +95,4 @@ export const featuresPageQuery = graphql`
       }
     }
   }
-`
+`;

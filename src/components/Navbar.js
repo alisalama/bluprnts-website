@@ -1,58 +1,57 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { Link } from "gatsby";
 // import github from '../../static/img/github-icon.svg'
-import logo from '../../static/img/bluprnts/bluprnts - white.svg'
+import logo from "../../static/img/bluprnts/bluprnts - white.svg";
 
 const Navbar = class extends React.Component {
-
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-      navbarState: ''
-    }
+      navBarActiveClass: "",
+      navbarState: ""
+    };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.navbarScroll);
+    window.addEventListener("scroll", this.navbarScroll);
   }
 
   // set the scrolling behaviours
   navbarScroll = () => {
-
     if (window.scroll) {
-      var height = window.scrollY;  //getting the scrolling height of window
-      this.setState({ navbarState: height > 50 ? 'is-active' : '' }); // set the state, dependent on the height
+      var height = window.scrollY; //getting the scrolling height of window
+      this.setState({ navbarState: height > 50 ? "is-active" : "" }); // set the state, dependent on the height
     }
-
-  }
+  };
 
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active,
+        active: !this.state.active
       },
       // after state has been updated,
       () => {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-            navBarActiveClass: 'is-active',
-          })
+              navBarActiveClass: "is-active"
+            })
           : this.setState({
-            navBarActiveClass: '',
-          })
+              navBarActiveClass: ""
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
       <>
         <nav
-          className={`navbar navbar-wrapper is-cloned ${this.state.navbarState}`}
+          className={`navbar navbar-wrapper is-cloned ${
+            this.state.navbarState
+          }`}
           role="navigation"
           aria-label="main-navigation"
         >
@@ -68,9 +67,9 @@ const Navbar = class extends React.Component {
                   <span className="menu-toggle">
                     <span className="icon-box-toggle">
                       <span className="rotate">
-                        <i className="icon-line-top"></i>
-                        <i className="icon-line-center"></i>
-                        <i className="icon-line-bottom"></i>
+                        <i className="icon-line-top" />
+                        <i className="icon-line-center" />
+                        <i className="icon-line-bottom" />
                       </span>
                     </span>
                   </span>
@@ -82,43 +81,46 @@ const Navbar = class extends React.Component {
             <div id="is-cloned" className="navbar-menu">
               {/* <!-- Navbar Start --> */}
               <div className="navbar-start">
-
                 <Link className="navbar-item" to="/features">
                   Features
-              </Link>
-
-                <Link className="navbar-item" to="/about">
+                </Link>
+                <Link className="navbar-item" to="/how">
+                  How
+                </Link>
+                {/* <Link className="navbar-item" to="/about">
                   About
-              </Link>
+              </Link> */}
                 <Link className="navbar-item" to="/pricing">
                   Pricing
-              </Link>
+                </Link>
                 <Link className="navbar-item" to="/blog">
                   Blog
-              </Link>
+                </Link>
                 <Link className="navbar-item" to="/contact">
                   Contact
-              </Link>
-
+                </Link>
               </div>
 
               {/* <!-- Navbar end --> */}
               <div className="navbar-end">
-                <div className="navbar-item is-button is-centered-tablet" onClick={this.navbarScroll}>
-                  <a id="#signup-btn-double"
+                <div
+                  className="navbar-item is-button is-centered-tablet"
+                  onClick={this.navbarScroll}
+                >
+                  <a
+                    id="#signup-btn-double"
                     href="https://app.bluprnts.com"
-                    className="button button-cta is-bold btn-align secondary-btn raised">
+                    className="button button-cta is-bold btn-align secondary-btn raised"
+                  >
                     Try the demo!
-                    </a>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </nav>
 
-        <nav
-          className="navbar navbar-wrapper is-transparent is-static"
-        >
+        <nav className="navbar navbar-wrapper is-transparent is-static">
           <div className="container">
             <div className="navbar-brand">
               <Link to="/" className="navbar-item" title="Logo">
@@ -131,9 +133,9 @@ const Navbar = class extends React.Component {
                   <span className="menu-toggle">
                     <span className="icon-box-toggle">
                       <span className="rotate">
-                        <i className="icon-line-top"></i>
-                        <i className="icon-line-center"></i>
-                        <i className="icon-line-bottom"></i>
+                        <i className="icon-line-top" />
+                        <i className="icon-line-center" />
+                        <i className="icon-line-bottom" />
                       </span>
                     </span>
                   </span>
@@ -141,7 +143,9 @@ const Navbar = class extends React.Component {
               </div>
 
               <div
-                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                className={`navbar-burger burger ${
+                  this.state.navBarActiveClass
+                }`}
                 data-target="navMenu"
                 onClick={() => this.toggleHamburger()}
               >
@@ -151,31 +155,31 @@ const Navbar = class extends React.Component {
               </div>
             </div>
 
-
             {/* <!-- Navbar menu --> */}
             <div id="is-static" className="navbar-menu">
               {/* <!-- Navbar Start --> */}
               <div className="navbar-start">
-
                 <Link className="navbar-item" to="/features">
                   Features
-              </Link>
-
-                <Link className="navbar-item" to="/about">
+                </Link>
+                <Link className="navbar-item" to="/how">
+                  How
+                </Link>
+                {/* <Link className="navbar-item" to="/about">
                   About
-              </Link>
+                </Link> */}
                 <Link className="navbar-item" to="/pricing">
                   Pricing
-              </Link>
+                </Link>
                 {/* <Link className="navbar-item" to="/products">
                   Products
               </Link> */}
                 <Link className="navbar-item" to="/blog">
                   Blog
-              </Link>
+                </Link>
                 <Link className="navbar-item" to="/contact">
                   Contact
-              </Link>
+                </Link>
 
                 {/* <!-- Dropdown -->
                 <!-- {{> megamenu}} -->
@@ -191,7 +195,6 @@ const Navbar = class extends React.Component {
                 <!-- <a className="navbar-item is-slide" href="landing-v4-pricing.html">
                     Pricing
                 </a> --> */}
-
               </div>
 
               {/* <!-- Navbar end --> */}
@@ -203,14 +206,12 @@ const Navbar = class extends React.Component {
                     </a>
                 </div> --> */}
               </div>
-
             </div>
           </div>
         </nav>
-
       </>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;
