@@ -299,13 +299,17 @@ TABLE OF CONTENTS
         border-radius: 4px;
         border: 1px solid $fade-grey;
         box-shadow: 0 3px 10px 4px rgba(0,0,0,.04);
-        transition: all .6s;
+        transition: transform .6s, opacity .6s;
         transform: translateX(-100%);
         opacity: 0;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
+        .gatsby-image-wrapper{
+            position: inherit !important;
+            transition: none;
+        }
     }
     //Active state
     &.is-active {

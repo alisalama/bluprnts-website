@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Slider from '../components/Slider';
 import ContactTabs from '../components/ContactTabs'
+import Img from "gatsby-image"
+
 
 
 // importing images
@@ -15,7 +17,6 @@ import landingImage1 from '../../static/img/illustrations/drawings/landing5-1.sv
 import landingImage3 from '../../static/img/illustrations/drawings/landing5-3.svg'
 import landingImage5 from '../../static/img/illustrations/drawings/landing5-5.svg'
 import cityscape from '../../static/img/illustrations/drawings/line-city.svg'
-
 import ReactLineGraphAnimated from '../components/LineChartAnimated';
 
 
@@ -288,8 +289,12 @@ export const IndexPageTemplate = ({data}) => (
               </div>
 
               <div className="column is-6">
-                <img className="featured-ui app-showcase" src={plChart}
-                  alt="" />
+                {/* <img src={plChart} alt="asdlkm" /> */}
+              <Img
+                className="featured-ui app-showcase"
+                fluid={data.feature2.childImageSharp.fluid}
+                alt="Profit and Loss Example"
+              />
               </div>
             </div>
 
@@ -578,6 +583,18 @@ export default IndexPage
 //     }
 //   }
 // `
+// export const pageQuery = graphql`
+//   fragment NameParts on Person {
+//     childImageSharp {
+//       extension
+//       publicURL
+//       fluid(maxWidth: 400, maxHeight: 250, quality: 90) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+// }`
+
 
 export const pageQuery = graphql`
   query HeaderImageQuery {
@@ -590,10 +607,17 @@ export const pageQuery = graphql`
     },
     shapesWhite: file(relativePath: { eq: "bg/shapes/circles-and-shapes-w.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 250, quality: 90) {
+        fluid(maxWidth: 400, maxHeight: 250, quality: 90) {
           ...GatsbyImageSharpFluid
         }
       }
-    }
+    },
+    feature2: file(relativePath: { eq: "screengrabs/profit and loss chart.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 566, maxHeight: 406) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
   }
 `

@@ -1,11 +1,9 @@
-import React from 'react'
-
-import bluprntsScreenshot from '../../static/img/screengrabs/bluprnts.png';
-import financialsScreenshot from '../../static/img/screengrabs/financials.png';
-import salesDashboardScreenshot from '../../static/img/screengrabs/sales.png';
+import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
+import Img from "gatsby-image"
 
 const Slider = class extends React.Component {
-    
+
     constructor(props) {
         super(props);
         this.state = { currentText: 'feature-1' };
@@ -18,6 +16,8 @@ const Slider = class extends React.Component {
     }
 
     render() {
+
+        const { data } = this.props;
         return (
             <>
                 <div className="columns is-vcentered">
@@ -25,13 +25,19 @@ const Slider = class extends React.Component {
                     <div className="column is-7">
                         <div className="showcase-wrapper">
                             <div id="mockup-1" className={`showcase-wrap ${this.state.currentText === 'feature-1' ? 'is-active' : ''}`} >
-                                <img className="app-showcase" src={bluprntsScreenshot} alt="" />
+                                <div className="app-showcase">
+                                    <Img fluid={data.bluprnts.childImageSharp.fluid} fadeIn={false} alt="Dashboard" style={{position: "inherit"}}/>
+                                </div>
                             </div>
                             <div id="mockup-2" className={`showcase-wrap ${this.state.currentText === 'feature-2' ? 'is-active' : ''}`} >
-                                <img className="app-showcase" src={financialsScreenshot} alt="" />
+                                <div className="app-showcase">
+                                    <Img fluid={data.financials.childImageSharp.fluid} fadeIn={false} alt="Financials" style={{position: "inherit"}}/>
+                                </div>
                             </div>
                             <div id="mockup-3" className={`showcase-wrap ${this.state.currentText === 'feature-3' ? 'is-active' : ''}`} >
-                                <img className="app-showcase" src={salesDashboardScreenshot} alt="" />
+                                <div className="app-showcase">
+                                    <Img fluid={data.sales.childImageSharp.fluid} fadeIn={false} alt="Sales Dashboard" style={{position: "inherit"}}/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,7 +93,38 @@ const Slider = class extends React.Component {
     }
 }
 
-export default Slider
+// export default Slider
+
+export default props => (
+    <StaticQuery
+        query={pageQuery}
+        render={data => <Slider data={data} {...props} />}
+    />
+)
 
 
-
+export const pageQuery = graphql`
+  query SliderImageQuery {
+    bluprnts: file(relativePath: { eq: "screengrabs/bluprnts.png" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    },
+    financials: file(relativePath: { eq: "screengrabs/financials.png" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    },
+    sales: file(relativePath: { eq: "screengrabs/sales.png" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    },
+  }
+`
