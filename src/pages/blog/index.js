@@ -15,7 +15,6 @@ export default class BlogIndexPage extends React.Component {
           <div className="container has-text-centered">
             <div className="columns is-vcentered">
               <div className="column is-6 is-offset-3 has-text-centered ">
-              
                 <h1 className="title is-1 is-medium is-spaced is-header-caption">
                   Blog
                 </h1>
@@ -23,7 +22,7 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </div>
         </div>
-          <section className="section is-medium blog-section no-line-bottom has-background-image is-contain is-top circles-and-shapes"> 
+          <section className="section is-medium blog-section no-line-top no-line-bottom has-background-image is-contain is-top circles-and-shapes"> 
             <div className="container">
               <BlogRoll />
             </div>

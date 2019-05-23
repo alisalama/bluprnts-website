@@ -13,7 +13,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         {/* <!-- Contact Section --> */}
-        <div className="section is-medium section-feature-grey no-line-top no-line-bottom">
+        <div className="section section-feature-grey no-line-top no-line-bottom">
           <div className="container">
             {/* <!-- Title --> */}
             <div className="section-title-wrapper has-text-centered">

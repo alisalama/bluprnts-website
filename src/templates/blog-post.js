@@ -30,7 +30,6 @@ export const BlogPostTemplate = ({
         <div className="container has-text-centered">
           <div className="columns is-vcentered">
             <div className="column is-6 is-offset-3 has-text-centered ">
-
               <h1 className="title is-1 is-medium is-spaced is-header-caption">
                 Blog
                 </h1>

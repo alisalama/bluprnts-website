@@ -34,15 +34,18 @@ sans-serif,
 "Segoe UI Symbol";
 
 $body-size: 14px;
+
 html {
     font-size: $body-size;
+
     @include tablet {
-      font-size: $body-size;
+        font-size: $body-size;
     }
+
     @include desktop {
-      font-size: $body-size;
+        font-size: $body-size;
     }
-  }
+}
 
 body {
     font-family: $family-sans-serif;
@@ -134,4 +137,75 @@ $accent-box-shadow: 0 14px 26px -12px $accent-shadow-from,
 
 .showcase-wrap {
     max-height: 350px;
+}
+
+
+
+// 
+//  SVG ANIMATED
+.check-mark-animate {
+    svg {
+        width: 100px;
+        display: block;
+        margin: 40px auto 0;
+    }
+
+    .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+
+        &.circle {
+            animation: dash 1.5s ease-in-out;
+        }
+
+        &.line {
+            stroke-dashoffset: 1000;
+            animation: dash 1.5s .35s ease-in-out forwards;
+        }
+
+        &.check {
+            stroke-dashoffset: -100;
+            animation: dash-check 1.5s .35s ease-in-out forwards;
+        }
+    }
+
+    @-webkit-keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dashoffset: 1000;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @-webkit-keyframes dash-check {
+        0% {
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dashoffset: 900;
+        }
+    }
+
+    @keyframes dash-check {
+        0% {
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dashoffset: 900;
+        }
+    }
 }

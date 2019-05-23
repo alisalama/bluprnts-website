@@ -1010,7 +1010,7 @@ TABLE OF CONTENTS
         background: $title-grey !important;
         transform: rotate(0deg);
         position: absolute;
-        right: 28%;
+        right: 50px;
         bottom: -22px;
         box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
         i.unliked {
@@ -1133,7 +1133,7 @@ TABLE OF CONTENTS
     .post-meta {
         display: flex;
         justify-content: flex-start;
-        padding: 60px;
+        padding: 0;
         margin: 0;
         border-bottom: 1px solid $fade-grey;
         img {
@@ -1143,7 +1143,7 @@ TABLE OF CONTENTS
         }
         .title-block {
             position: relative;
-            padding: 0 20px;
+            padding: 60px;
             width: 100%;
             h2, h4 {
                 margin-bottom: 0;
@@ -1159,9 +1159,9 @@ TABLE OF CONTENTS
                 padding: 10px 0;
             }
             .like {
-                right: 20px;
+                right: 50px;
                 &.is-full {
-                    bottom: -32px;
+                    bottom: -22px;
                 }
             }
         }

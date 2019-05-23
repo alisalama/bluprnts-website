@@ -82,7 +82,7 @@ const ContactForm = class extends React.Component {
               </div>
               <div className="column is-12">
                 <div className="control">
-                  <label for='message'>Message *</label>
+                  <label>Message *</label>
                   <textarea className="textarea" name="message" rows="4" id={'message'} required={true} onChange={this.handleChange}></textarea>
                 </div>
               </div>
