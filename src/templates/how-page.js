@@ -384,8 +384,8 @@ class HowPageTemplate extends React.Component {
                 {/* <!-- Title --> */}
                 <div className="section-title-wrapper has-text-centered">
                   <div className="bg-number">&</div>
-                  <h2 className="title">That's not all</h2>
-                  <h4 className="subtitle">Discover more Features</h4>
+                  <h2 className="title">There's plenty more</h2>
+                  <h4 className="subtitle">Discover more features</h4>
                 </div>
                 {/* <!-- /Title --> */}
               </div>
@@ -395,13 +395,13 @@ class HowPageTemplate extends React.Component {
               <div className="columns is-vcentered">
 
 
-                {/* <div class="column is-3">
-                  <div class="how-icon-box">
+                {/* <div className="column is-3">
+                  <div className="how-icon-box">
                     <div>
-                      <i class="im im-icon-Ticket" />
+                      <i className="im im-icon-Ticket" />
                     </div>
-                    <div class="box-title">Products</div>
-                    <p class="box-content is-tablet-padded">
+                    <div className="box-title">Products</div>
+                    <p className="box-content is-tablet-padded">
                       The products and services that your company sells to it's
                       customers now or in the future.
                     </p>
@@ -428,7 +428,7 @@ class HowPageTemplate extends React.Component {
                 <div className="column is-4">
                   {/* <!-- Side icon box --> */}
                   <div className="content content-flex how-icon-box">
-                    <i className="im im-icon-Microphone-4 color-secondary is-size-2" />
+                    <i className="im im-icon-Microphone-4 color-secondary" />
                     <div className="dark-text has-text-left ml-30">
                       <h5 className="is-landing primary-text text-bold pt-5 pb-5">
                         Fully customisable
@@ -444,7 +444,7 @@ class HowPageTemplate extends React.Component {
                 <div className="column is-4">
                   {/* <!-- Side icon box --> */}
                   <div className="content content-flex how-icon-box">
-                    <i className="im im-icon-Mail color-secondary is-size-2" />
+                    <i className="im im-icon-Mail color-secondary" />
                     <div className="dark-text has-text-left ml-30">
                       <h5 className="is-landing primary-text text-bold pt-5 pb-5">
                         Scenarios

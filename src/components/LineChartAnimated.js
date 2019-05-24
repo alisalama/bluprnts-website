@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-let myLineChart;
 // import classes from './LineGraph.module.css';
 
 
