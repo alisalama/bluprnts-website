@@ -8,10 +8,6 @@ import Img from "gatsby-image";
 import ContactForm from "../components/ContactForm";
 
 // importing images
-import heroImage from "../../static/img/illustrations/drawings/landing5-2.svg";
-import logo from "../../static/img/bluprnts/bluprnts - white.svg";
-
-
 import bluprnts from "../../static/img/screengrabs/bluprnts.png";
 import heroBackground from "../../static/img/bg/shapes/hrbg.png";
 // static/img/bg/shapes/hrbg.png
@@ -30,7 +26,7 @@ export const IndexPageTemplate = ({ data }) => (
         <div className="container has-text-centered">
           <div className="columns">
             <div className="column is-4 is-offset-4 has-text-centered">
-              <h1 className="title big-title text-bold is-2">
+              <h1 className="title big-title is-2">
                 {/* <img src={logo} className="" alt="bluprnts" /> */}
                 Fast Financial Forecasting
               </h1>
@@ -490,7 +486,7 @@ export const IndexPageTemplate = ({ data }) => (
     {/* <!-- /Testimonials Section --> */}
 
     {/* <!-- Contact Section --> */}
-    <div className="section is-medium section-feature-grey">
+    <div className="section is-medium section-feature-grey no-lines">
       <div className="container">
         {/* <!-- Title --> */}
         <div className="section-title-wrapper has-text-centered">

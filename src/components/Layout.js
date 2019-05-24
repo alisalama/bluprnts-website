@@ -6,6 +6,7 @@ import BackToTop from './BackToTop';
 import '../styling/core_blue.scss';
 import '../styling/icons.scss';
 import 'typeface-muli';
+// import 'typeface-lato';
 import useSiteMetadata from './SiteMetadata'
 import CookieConsent from "react-cookie-consent";
 
@@ -29,7 +30,7 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/img/favicon.png"
+          href="/img/favicon@2x.png"
         />
         <link
           rel="icon"
@@ -46,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
 
         <link
           rel="mask-icon"
-          href="/img/favicon.png"
+          href="/img/favicon@2x.png"
           color="#ff4400"
         />
 

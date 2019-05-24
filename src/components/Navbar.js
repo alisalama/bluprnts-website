@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-// import github from '../../static/img/github-icon.svg'
-import logo from "../../static/img/bluprnts/bluprnts - white.svg";
+import logo from "../../static/img/bluprnts/bluprnts.svg";
+
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -81,9 +81,9 @@ const Navbar = class extends React.Component {
             <div id="is-cloned" className="navbar-menu">
               {/* <!-- Navbar Start --> */}
               <div className="navbar-start">
-                <Link className="navbar-item" to="/features">
+                {/* <Link className="navbar-item" to="/features">
                   Features
-                </Link>
+                </Link> */}
                 <Link className="navbar-item" to="/how">
                   How
                 </Link>
@@ -159,9 +159,9 @@ const Navbar = class extends React.Component {
             <div id="is-static" className="navbar-menu">
               {/* <!-- Navbar Start --> */}
               <div className="navbar-start">
-                <Link className="navbar-item" to="/features">
+                {/* <Link className="navbar-item" to="/features">
                   Features
-                </Link>
+                </Link> */}
                 <Link className="navbar-item" to="/how">
                   How
                 </Link>
