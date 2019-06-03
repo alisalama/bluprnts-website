@@ -61,12 +61,12 @@ pricing:
       items:
         - 1-10 Employees
         - 1 user account
-        - unlimited everything else!
+        - Unlimited everything else!
       monthly_price: '50'
       plan: Lite
       yearly_price: '600'
     - image: /img/005-hotel.svg
-      description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+      description: Great for medium sized businesses
       items:
         - 11-100 Employees
         - Multiple user accounts
