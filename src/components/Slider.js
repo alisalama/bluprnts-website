@@ -56,8 +56,7 @@ const Slider = class extends React.Component {
                         <div id="feature-2" className={`showcase-text-wrapper animated preFadeInUp fadeInUp ${this.state.currentText === 'feature-2' ? '' : 'is-hidden'}`} >
                             <h3 className="title is-3">Accounting</h3>
                             <p>Full financial statements at a granular level are created for you to give you and indication
-                                of tbhe position you
-                            will be in at each month and year.</p>
+                                of the financial position you at each month and year.</p>
                             <a href="https://app.bluprnts.com" className="button button-cta is-bold btn-align secondary-btn raised mt-20 mb-20">
                                 Learn more
                         </a>

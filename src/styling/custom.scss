@@ -131,10 +131,9 @@ $accent-box-shadow: 0 14px 26px -12px $accent-shadow-from,
 5. Icon box
 ========================================================================== */
 .how-icon-box {
-    i {
-        font-size: 3.8rem;
-        font-weight: normal;
-        color: $secondary;
+    img{
+        width: 30%;
+        padding: 10px;
     }
     .box-title {
         padding: 5px 0;
@@ -143,6 +142,9 @@ $accent-box-shadow: 0 14px 26px -12px $accent-shadow-from,
         font-weight: 600;
         color: $primary;
     }
+}
+.icon-subtitle img{
+    width: 10%;
 }
 
 .square-icon-box {

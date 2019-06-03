@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // const Pricing =  => {
 class Pricing extends React.Component {
 
   constructor(props) {
-    super(props)
-    this.state = { pricing: 'monthly' }
+    super(props);
+    this.state = { pricing: 'monthly' };
   }
   
   selectionChanged = (e) =>  {
     this.setState({
-      pricing: e.currentTarget.value
+      pricing: e.currentTarget.value,
     });
   }
 
@@ -59,12 +59,11 @@ class Pricing extends React.Component {
                   </p>
                 </div>
 
-                <div className="columns tables-wrap">
-                  <div className="columns">
+                <div className="columns is-4 tables-wrap">
                     {
                       pricing.plans.map(price => (
 
-                        <div key={price.plan} className="column is-4">
+                        <div key={price.plan} className="column">
                           <div className="flex-card">
                             {/* <!-- Pricing image --> */}
                             <div className="pricing-image-container">
@@ -81,25 +80,25 @@ class Pricing extends React.Component {
                             {/* <!-- Pricing plan name --> */}
                             <div className="plan-name has-text-centered">
                               <h3>{price.plan}</h3>
+                              <p>{price.description}</p>
                             </div>
                             {/* <!-- Pricing plan features --> */}
                             <ul className="plan-features">
-                              {price.description}
                               {price.items.map(item => (
-                                <li key={item} className="is-size-5">
+                                <li key={item} className="">
                                   {item}
                                 </li>
                               ))}
                             </ul>
-                            {/* <!-- Pricing action -->s */}
+                            {/* <!-- Pricing action --> */}
                             <div className="button-wrapper">
-                              <a href="https://app.bluprnts.com" className="button secondary-btn is-fullwidth raised btn-align is-bold btn-upper">Sign up</a>
+                              <a href="https://app.bluprnts.com" className="button secondary-btn is-fullwidth">Sign up</a>
+                              {/* is-fullwidth raised  is-bold btn-upper */}
                             </div>
                           </div>
                         </div>
                       ))}
 
-                  </div>
                 </div>
               </div>
             </div>

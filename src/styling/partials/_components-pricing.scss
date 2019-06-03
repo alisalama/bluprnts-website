@@ -1084,6 +1084,16 @@ TABLE OF CONTENTS
         .flex-card {
             padding: 20px;
             border-radius: 8px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            .button-wrapper{
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                padding: 0 10px;
+                width: 100%;
+            }
             .pricing-image-container {
                 position: relative;
                 width: 140px;

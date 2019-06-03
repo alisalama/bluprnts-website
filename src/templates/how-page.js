@@ -4,27 +4,22 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
+import productsBlue from "../../static/img/illustrations/icons/color/parcel-blue.svg";
+import employeesBlue from "../../static/img/illustrations/icons/color/employee-blue.svg"
+import costsBlue from "../../static/img/illustrations/icons/color/costs-blue.svg";
+import financingBlue from "../../static/img/illustrations/icons/color/financing-blue.svg";
+
+import products from "../../static/img/illustrations/icons/color/parcel.svg";
+import employees from "../../static/img/illustrations/icons/color/employee.svg"
+import costs from "../../static/img/illustrations/icons/color/costs.svg";
+import financing from "../../static/img/illustrations/icons/color/financing.svg";
+
+
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
 class HowPageTemplate extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      columnDefs: [
-        { headerName: "Make", field: "make" },
-        { headerName: "Model", field: "model" },
-        { headerName: "Price", field: "price" }
-      ],
-      rowData: [
-        { make: "Toyota", model: "Celica", price: 35000 },
-        { make: "Ford", model: "Mondeo", price: 32000 },
-        { make: "Porsche", model: "Boxter", price: 72000 }
-      ]
-    };
-  }
 
   render() {
     const { title, content, contentComponent } = this.props;
@@ -57,9 +52,7 @@ class HowPageTemplate extends React.Component {
                 {/* <!-- Icon block --> */}
                 <div className="column is-3">
                   <div className="how-icon-box">
-                    <div>
-                      <i className="im im-icon-Ticket" />
-                    </div>
+                      <img class="" src={productsBlue} alt="Products" />
                     <div className="box-title">Products</div>
                     <p className="box-content is-tablet-padded">
                       The products and services that your company sells to it's
@@ -70,9 +63,7 @@ class HowPageTemplate extends React.Component {
                 {/* <!-- Icon block --> */}
                 <div className="column is-3">
                   <div className="how-icon-box">
-                    <div>
-                      <i className="im im-icon-Speach-Bubble11" />
-                    </div>
+                      <img class="" src={employeesBlue} alt="Employees" />
                     <div className="box-title">People</div>
                     <p className="box-content is-tablet-padded">
                       Those wonderful people that are your employees that make
@@ -83,9 +74,7 @@ class HowPageTemplate extends React.Component {
                 {/* <!-- Icon block --> */}
                 <div className="column is-3">
                   <div className="how-icon-box">
-                    <div>
-                      <i className="im im-icon-Mail-Settings" />
-                    </div>
+                      <img class="" src={costsBlue} alt="Costs" />
                     <div className="box-title">Costs</div>
                     <p className="box-content is-tablet-padded">
                       All the investments and costs that you plan to spend in
@@ -96,9 +85,7 @@ class HowPageTemplate extends React.Component {
                 {/* <!-- Icon block --> */}
                 <div className="column is-3">
                   <div className="how-icon-box">
-                    <div>
-                      <i className="im im-icon-Upload-toCloud" />
-                    </div>
+                      <img class="" src={financingBlue} alt="Financing" />
                     <div className="box-title">Financing</div>
                     <p className="box-content is-tablet-padded">
                       All the loans, credit or mortgages that your business has
@@ -134,7 +121,7 @@ class HowPageTemplate extends React.Component {
 
               <div className="column is-4 is-offset-1">
                 <div className="icon-subtitle">
-                  <i className="im im-icon-Speach-Bubble2" />
+                  <img class="" src={products} alt="Products" />
                 </div>
                 <h2 className="title quick-feature is-handwritten">
                   Products
@@ -207,7 +194,7 @@ class HowPageTemplate extends React.Component {
               {/* <!-- Content --> */}
               <div className="column is-4 is-offset-2">
                 <div className="icon-subtitle">
-                  <i className="im im-icon-Share-Window" />
+                <img class="" src={employees} alt="Employees" />
                 </div>
                 <h2 className="title quick-feature is-handwritten">
                   People
@@ -263,7 +250,8 @@ class HowPageTemplate extends React.Component {
               {/* <!-- Content --> */}
               <div className="column is-4 is-offset-1">
                 <div className="icon-subtitle">
-                  <i className="im im-icon-Life-Safer" />
+                  <img class="" src={costs} alt="Costs" />
+                  {/* <i className="im im-icon-Life-Safer" /> */}
                 </div>
                 <h2 className="title quick-feature is-handwritten">
                   Costs
@@ -336,7 +324,8 @@ class HowPageTemplate extends React.Component {
               {/* <!-- Content --> */}
               <div className="column is-4 is-offset-2">
                 <div className="icon-subtitle">
-                  <i className="im im-icon-Smartphone-4" />
+                  {/* <i className="im im-icon-Smartphone-4" /> */}
+                  <img class="" src={financing} alt="Financing" />
                 </div>
                 <h2 className="title quick-feature is-handwritten">
                   Financing
