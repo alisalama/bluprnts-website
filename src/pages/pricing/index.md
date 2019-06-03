@@ -74,7 +74,7 @@ pricing:
       monthly_price: '99'
       plan: Large
       yearly_price: '900'
-    - image: /img/scooter.svg
+    - image: /img/002-manufacturer.svg
       description: For large enterprises
       items:
         - 50+ employees
