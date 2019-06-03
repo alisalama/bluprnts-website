@@ -61,6 +61,7 @@ pricing:
       items:
         - 1-10 Employees
         - 1 user account
+        - Comprehensive support
         - Unlimited everything else!
       monthly_price: '50'
       plan: Lite
@@ -70,15 +71,19 @@ pricing:
       items:
         - 11-100 Employees
         - Multiple user accounts
-        - unlimited everything else!
+        - Comprehensive support
+        - Unlimited everything else!
       monthly_price: '99'
       plan: Large
       yearly_price: '900'
     - image: /img/002-manufacturer.svg
       description: For large enterprises
       items:
-        - 50+ employees
-        - full training included
+        - 100+ employees
+        - Multiple user accounts
+        - Free training
+        - Comprehensive support
+        - Unlimited everything else!
       monthly_price: '??'
       plan: Enterprise
       yearly_price: '??'
