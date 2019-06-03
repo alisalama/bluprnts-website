@@ -57,14 +57,14 @@ pricing:
   description: Pick your plan!
   plans:
     - image: /img/003-clothing-shop.svg
-      description: Perfect for the startup or small business
+      description: Perfect for a startup or a small business
       items:
         - 1-10 Employees
         - 1 user account
         - Comprehensive support
         - Unlimited everything else!
       monthly_price: '50'
-      plan: Lite
+      plan: Startup
       yearly_price: '600'
     - image: /img/005-hotel.svg
       description: Great for medium sized businesses
