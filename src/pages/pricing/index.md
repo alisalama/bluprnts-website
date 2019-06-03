@@ -56,32 +56,31 @@ pricing:
   heading: Pricing
   description: Pick your plan!
   plans:
-    - image: /img/scooter.svg
-      description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - image: /img/003-clothing-shop.svg
+      description: Perfect for the startup or small business
       items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
+        - 1-10 Employees
+        - 1 user account
+        - unlimited everything else!
       monthly_price: '50'
-      plan: Small
+      plan: Lite
       yearly_price: '600'
-    - image: /img/motorcycle.svg
+    - image: /img/005-hotel.svg
       description: 'Great for avid drinkers, java-loving couples and bigger crowds'
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      monthly_price: '80'
-      plan: Big
+        - 11-100 Employees
+        - Multiple user accounts
+        - unlimited everything else!
+      monthly_price: '99'
+      plan: Large
       yearly_price: '900'
     - image: /img/scooter.svg
-      description: Want a few tiny batches from different varieties? Try our custom plan
+      description: For large enterprises
       items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
+        - 50+ employees
+        - full training included
       monthly_price: '??'
-      plan: Custom
+      plan: Enterprise
       yearly_price: '??'
 ---
 
